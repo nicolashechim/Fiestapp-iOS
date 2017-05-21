@@ -8,10 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93567AE81EC25BA700056124 /* AppDelegate.swift */; };
-		93567AEB1EC25BA700056124 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93567AEA1EC25BA700056124 /* ViewController.swift */; };
 		93567AEE1EC25BA700056124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEC1EC25BA700056124 /* Main.storyboard */; };
 		93567AF01EC25BA700056124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEF1EC25BA700056124 /* Assets.xcassets */; };
 		93567AF31EC25BA700056124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AF11EC25BA700056124 /* LaunchScreen.storyboard */; };
+		937821E01EC7AD9B001A2710 /* FiestaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937821DF1EC7AD9B001A2710 /* FiestaTableViewCell.swift */; };
+		937821E21EC8CD6A001A2710 /* MisFiestasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937821E11EC8CD6A001A2710 /* MisFiestasTableViewController.swift */; };
+		937821E31ECA062C001A2710 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43DC1EC7A4F7008EE1B6 /* Ubuntu-M.ttf */; };
+		937821E41ECA0630001A2710 /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43D41EC78C6B008EE1B6 /* Ubuntu-B.ttf */; };
+		937821E51ECA0632001A2710 /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43D51EC78C6B008EE1B6 /* Ubuntu-R.ttf */; };
+		9388A1541ECF56B900670B24 /* ic_action_add_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1531ECF56B900670B24 /* ic_action_add_circle@2x.png */; };
+		9388A1561ECF56C800670B24 /* ic_action_add_circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */; };
+		9388A1581ECF571C00670B24 /* ic_action_notifications@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */; };
+		9388A15A1ECF572F00670B24 /* ic_action_notifications@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */; };
+		9388A15E1ECF65F100670B24 /* FiestaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15D1ECF65F100670B24 /* FiestaModel.swift */; };
+		9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */; };
+		9388A1631ED1C30D00670B24 /* splash_screen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1621ED1C30D00670B24 /* splash_screen.gif */; };
+		9388A1651ED1C50500670B24 /* splash_screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1641ED1C50500670B24 /* splash_screen2.png */; };
+		9388A1671ED1CA1D00670B24 /* AppNameAndSlogan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1661ED1CA1D00670B24 /* AppNameAndSlogan.png */; };
+		9388A16A1ED1DCF300670B24 /* Bg_profile_fiesta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */; };
+		9388A16C1ED1DE0400670B24 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A16B1ED1DE0400670B24 /* Profile.png */; };
+		93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */; };
+		93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */; };
+		93AB43C41EC77967008EE1B6 /* NotificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C31EC77967008EE1B6 /* NotificacionesViewController.swift */; };
+		93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */; };
+		93AB43CD1EC7855B008EE1B6 /* iconTab1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */; };
+		93AB43CE1EC7855B008EE1B6 /* iconTab1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */; };
+		93AB43D01EC789D8008EE1B6 /* IconBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CF1EC789D8008EE1B6 /* IconBack.png */; };
+		93AB43E01EC7AAC7008EE1B6 /* IconCircleMN.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43DF1EC7AAC7008EE1B6 /* IconCircleMN.png */; };
 		93DF4B6D1EC25F36004DCB81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */; };
 		BA69F4F04EED4C8787EF6D59 /* Pods_fiestapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409BAD742CF3BAEA6D9264FE /* Pods_fiestapp.framework */; };
 /* End PBXBuildFile section */
@@ -21,11 +44,35 @@
 		4B9BCFC6672A8773A1FC2AF2 /* Pods-fiestapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiestapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fiestapp/Pods-fiestapp.debug.xcconfig"; sourceTree = "<group>"; };
 		93567AE51EC25BA700056124 /* fiestapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fiestapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93567AE81EC25BA700056124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93567AEA1EC25BA700056124 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93567AED1EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93567AEF1EC25BA700056124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93567AF21EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93567AF41EC25BA700056124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		937821DF1EC7AD9B001A2710 /* FiestaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaTableViewCell.swift; sourceTree = "<group>"; };
+		937821E11EC8CD6A001A2710 /* MisFiestasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasTableViewController.swift; sourceTree = "<group>"; };
+		9388A1531ECF56B900670B24 /* ic_action_add_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_add_circle@2x.png"; sourceTree = "<group>"; };
+		9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_add_circle@3x.png"; sourceTree = "<group>"; };
+		9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@3x.png"; sourceTree = "<group>"; };
+		9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@2x.png"; sourceTree = "<group>"; };
+		9388A15D1ECF65F100670B24 /* FiestaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel.swift; sourceTree = "<group>"; };
+		9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
+		9388A1621ED1C30D00670B24 /* splash_screen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = splash_screen.gif; sourceTree = "<group>"; };
+		9388A1641ED1C50500670B24 /* splash_screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_screen2.png; sourceTree = "<group>"; };
+		9388A1661ED1CA1D00670B24 /* AppNameAndSlogan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppNameAndSlogan.png; sourceTree = "<group>"; };
+		9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bg_profile_fiesta.jpg; sourceTree = "<group>"; };
+		9388A16B1ED1DE0400670B24 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
+		9388A16D1ED1E1E200670B24 /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LI.ttf"; sourceTree = "<group>"; };
+		93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasViewController.swift; sourceTree = "<group>"; };
+		93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaViewController.swift; sourceTree = "<group>"; };
+		93AB43C31EC77967008EE1B6 /* NotificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificacionesViewController.swift; sourceTree = "<group>"; };
+		93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaFiestaViewController.swift; sourceTree = "<group>"; };
+		93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@2x.png"; sourceTree = "<group>"; };
+		93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@3x.png"; sourceTree = "<group>"; };
+		93AB43CF1EC789D8008EE1B6 /* IconBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconBack.png; sourceTree = "<group>"; };
+		93AB43D41EC78C6B008EE1B6 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
+		93AB43D51EC78C6B008EE1B6 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
+		93AB43DC1EC7A4F7008EE1B6 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
+		93AB43DF1EC7AAC7008EE1B6 /* IconCircleMN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconCircleMN.png; sourceTree = "<group>"; };
 		93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FC4EC719A4FA3C4D99471F4 /* Pods-fiestapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiestapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fiestapp/Pods-fiestapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +101,7 @@
 		93567ADC1EC25BA700056124 = {
 			isa = PBXGroup;
 			children = (
+				93AB43C71EC780EB008EE1B6 /* Assets */,
 				93567AE71EC25BA700056124 /* fiestapp */,
 				93567AE61EC25BA700056124 /* Products */,
 				42711D6467F479731849A721 /* Pods */,
@@ -72,15 +120,126 @@
 		93567AE71EC25BA700056124 /* fiestapp */ = {
 			isa = PBXGroup;
 			children = (
+				9388A15C1ECF654A00670B24 /* Models */,
+				9388A15B1ECF651A00670B24 /* ViewControllers */,
+				93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */,
+				93567AF41EC25BA700056124 /* Info.plist */,
 				93567AE81EC25BA700056124 /* AppDelegate.swift */,
-				93567AEA1EC25BA700056124 /* ViewController.swift */,
-				93567AEC1EC25BA700056124 /* Main.storyboard */,
 				93567AEF1EC25BA700056124 /* Assets.xcassets */,
 				93567AF11EC25BA700056124 /* LaunchScreen.storyboard */,
-				93567AF41EC25BA700056124 /* Info.plist */,
-				93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */,
+				93567AEC1EC25BA700056124 /* Main.storyboard */,
 			);
 			path = fiestapp;
+			sourceTree = "<group>";
+		};
+		9388A14F1ECF516300670B24 /* MisFiestas */ = {
+			isa = PBXGroup;
+			children = (
+				937821DF1EC7AD9B001A2710 /* FiestaTableViewCell.swift */,
+				937821E11EC8CD6A001A2710 /* MisFiestasTableViewController.swift */,
+				93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */,
+			);
+			name = MisFiestas;
+			sourceTree = "<group>";
+		};
+		9388A1501ECF517400670B24 /* FiestaPerfil */ = {
+			isa = PBXGroup;
+			children = (
+				93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */,
+			);
+			name = FiestaPerfil;
+			sourceTree = "<group>";
+		};
+		9388A1511ECF519000670B24 /* Notificaciones */ = {
+			isa = PBXGroup;
+			children = (
+				93AB43C31EC77967008EE1B6 /* NotificacionesViewController.swift */,
+			);
+			name = Notificaciones;
+			sourceTree = "<group>";
+		};
+		9388A1521ECF51A000670B24 /* NuevaFiesta */ = {
+			isa = PBXGroup;
+			children = (
+				93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */,
+			);
+			name = NuevaFiesta;
+			sourceTree = "<group>";
+		};
+		9388A15B1ECF651A00670B24 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9388A1501ECF517400670B24 /* FiestaPerfil */,
+				9388A14F1ECF516300670B24 /* MisFiestas */,
+				9388A1511ECF519000670B24 /* Notificaciones */,
+				9388A1521ECF51A000670B24 /* NuevaFiesta */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9388A15C1ECF654A00670B24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9388A15D1ECF65F100670B24 /* FiestaModel.swift */,
+				9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9388A1611ED1C2F600670B24 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				9388A1621ED1C30D00670B24 /* splash_screen.gif */,
+				9388A1641ED1C50500670B24 /* splash_screen2.png */,
+				9388A1661ED1CA1D00670B24 /* AppNameAndSlogan.png */,
+			);
+			name = SplashScreen;
+			sourceTree = "<group>";
+		};
+		9388A1681ED1DCE500670B24 /* FiestaPerfil */ = {
+			isa = PBXGroup;
+			children = (
+				9388A16B1ED1DE0400670B24 /* Profile.png */,
+				9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */,
+			);
+			name = FiestaPerfil;
+			sourceTree = "<group>";
+		};
+		93AB43C71EC780EB008EE1B6 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9388A1681ED1DCE500670B24 /* FiestaPerfil */,
+				9388A1611ED1C2F600670B24 /* SplashScreen */,
+				93AB43D31EC78C1D008EE1B6 /* Fonts */,
+				93AB43C81EC780F7008EE1B6 /* Icons */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		93AB43C81EC780F7008EE1B6 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				93AB43DF1EC7AAC7008EE1B6 /* IconCircleMN.png */,
+				93AB43CF1EC789D8008EE1B6 /* IconBack.png */,
+				93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */,
+				93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */,
+				9388A1531ECF56B900670B24 /* ic_action_add_circle@2x.png */,
+				9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */,
+				9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */,
+				9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		93AB43D31EC78C1D008EE1B6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				93AB43DC1EC7A4F7008EE1B6 /* Ubuntu-M.ttf */,
+				93AB43D41EC78C6B008EE1B6 /* Ubuntu-B.ttf */,
+				93AB43D51EC78C6B008EE1B6 /* Ubuntu-R.ttf */,
+				9388A16D1ED1E1E200670B24 /* Ubuntu-LI.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		DEAB49D17F25CEACD12AD3CB /* Frameworks */ = {
@@ -154,10 +313,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93AB43CE1EC7855B008EE1B6 /* iconTab1@3x.png in Resources */,
+				937821E31ECA062C001A2710 /* Ubuntu-M.ttf in Resources */,
+				93AB43D01EC789D8008EE1B6 /* IconBack.png in Resources */,
 				93567AF31EC25BA700056124 /* LaunchScreen.storyboard in Resources */,
 				93DF4B6D1EC25F36004DCB81 /* GoogleService-Info.plist in Resources */,
+				93AB43CD1EC7855B008EE1B6 /* iconTab1@2x.png in Resources */,
+				937821E51ECA0632001A2710 /* Ubuntu-R.ttf in Resources */,
+				9388A1651ED1C50500670B24 /* splash_screen2.png in Resources */,
 				93567AF01EC25BA700056124 /* Assets.xcassets in Resources */,
+				9388A1541ECF56B900670B24 /* ic_action_add_circle@2x.png in Resources */,
 				93567AEE1EC25BA700056124 /* Main.storyboard in Resources */,
+				9388A1581ECF571C00670B24 /* ic_action_notifications@3x.png in Resources */,
+				9388A1671ED1CA1D00670B24 /* AppNameAndSlogan.png in Resources */,
+				93AB43E01EC7AAC7008EE1B6 /* IconCircleMN.png in Resources */,
+				9388A15A1ECF572F00670B24 /* ic_action_notifications@2x.png in Resources */,
+				9388A16A1ED1DCF300670B24 /* Bg_profile_fiesta.jpg in Resources */,
+				937821E41ECA0630001A2710 /* Ubuntu-B.ttf in Resources */,
+				9388A1561ECF56C800670B24 /* ic_action_add_circle@3x.png in Resources */,
+				9388A1631ED1C30D00670B24 /* splash_screen.gif in Resources */,
+				9388A16C1ED1DE0400670B24 /* Profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93567AEB1EC25BA700056124 /* ViewController.swift in Sources */,
+				93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */,
+				9388A15E1ECF65F100670B24 /* FiestaModel.swift in Sources */,
+				937821E21EC8CD6A001A2710 /* MisFiestasTableViewController.swift in Sources */,
+				93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */,
+				937821E01EC7AD9B001A2710 /* FiestaTableViewCell.swift in Sources */,
+				93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */,
 				93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */,
+				9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */,
+				93AB43C41EC77967008EE1B6 /* NotificacionesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
