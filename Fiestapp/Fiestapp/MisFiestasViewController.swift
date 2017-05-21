@@ -30,9 +30,18 @@ class MisFiestasViewController: UIViewController {
         return .lightContent
     }
     
+    //Back-left gesture
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Back-left gesture
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+        
         viewHeader.applyGradient(colours: [UIColor(red: 44/255, green: 193/255, blue: 255/255, alpha: 1),
                                            UIColor(red: 44/255, green: 93/255, blue: 255/255, alpha: 1)],
                                  locations: [0.0, 1.0])
