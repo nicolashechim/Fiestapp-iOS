@@ -16,17 +16,19 @@ class FiestaModel {
     var Fecha: String
     var Hora: String
     var Imagen: String
+    var CantidadDias: Int
     var CantidadFotos: Int
     var CantidadInvitados: Int
     var Funcionalidades = [EnumFuncionalidades]()
     
     //MARK: Initialization
-    init(nombre: String, detalle: String, fecha: String, hora: String, imagen: String, cantidadFotos: Int, cantidadInvitados: Int, funcionalidades: [EnumFuncionalidades]) {
+    init(nombre: String, detalle: String, fecha: String, hora: String, imagen: String, cantidadDias: Int, cantidadFotos: Int, cantidadInvitados: Int, funcionalidades: [EnumFuncionalidades]) {
         self.Nombre = nombre
         self.Detalle = detalle
         self.Fecha = fecha
         self.Hora = hora
         self.Imagen = imagen
+        self.CantidadDias = cantidadDias
         self.CantidadFotos = cantidadFotos
         self.CantidadInvitados = cantidadInvitados
         self.Funcionalidades = funcionalidades
@@ -38,6 +40,7 @@ class FiestaModel {
         self.Fecha = ""
         self.Hora = ""
         self.Imagen = ""
+        self.CantidadDias = 0
         self.CantidadFotos = 0
         self.CantidadInvitados = 0
         self.Funcionalidades = [EnumFuncionalidades]()

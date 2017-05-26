@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ycl-Z4-bQH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BHQ-ev-dtC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Vz3-o5-tV3" userLabel="Mis fiestas Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mis fiestas" image="iconTab1.png" id="hC3-ks-dJf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ac6-RF-Z3C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac6-RF-Z3C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -47,9 +47,9 @@
         <!--Notificaciones Navigation Controller-->
         <scene sceneID="TIG-Gc-pxs">
             <objects>
-                <navigationController id="wYh-2Q-ohx" userLabel="Notificaciones Navigation Controller" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="wYh-2Q-ohx" userLabel="Notificaciones Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notificaciones" image="ic_action_notifications.png" id="2BN-cF-51B"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2r-T7-ggx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2r-T7-ggx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -64,7 +64,7 @@
         <!--Mis Fiestas View Controller-->
         <scene sceneID="XvH-64-epF">
             <objects>
-                <viewController id="csu-xa-BPv" customClass="MisFiestasViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MisFiestasViewController" id="csu-xa-BPv" customClass="MisFiestasViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OpP-kC-Gi1"/>
                         <viewControllerLayoutGuide type="bottom" id="G92-zj-xq6"/>
@@ -123,10 +123,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen_MisFiestas.png" translatesAutoresizingMaskIntoConstraints="NO" id="XoF-4E-VCD">
-                                            <rect key="frame" x="0.0" y="53" width="375" height="69.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HkN-Nh-srs" userLabel="View - Card Mask">
                                             <rect key="frame" x="17" y="10" width="341" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -204,9 +200,10 @@
                                             <action selector="goBack:" destination="HQi-I1-NK8" eventType="touchUpInside" id="sWn-Nn-5Zm"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IconCircleMN.png" translatesAutoresizingMaskIntoConstraints="NO" id="huh-9l-EEo" userLabel="Image - Profile">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="huh-9l-EEo" userLabel="Image - Profile">
                                         <rect key="frame" x="144" y="111" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.69796198606491089" green="0.69808381795883179" blue="0.69795435667037964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Casamiento M N" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMu-fr-ETL" userLabel="Label - Title">
                                         <rect key="frame" x="48" y="214" width="278" height="30"/>
@@ -278,8 +275,14 @@
                     <connections>
                         <outlet property="back" destination="Y6J-EI-asp" id="k4Z-7i-5CX"/>
                         <outlet property="imageProfile" destination="huh-9l-EEo" id="nEx-gJ-6za"/>
-                        <outlet property="labelDetails" destination="rQe-d1-uRa" id="1Ub-Rv-cB4"/>
-                        <outlet property="labelTitle" destination="AMu-fr-ETL" id="oHz-lP-URp"/>
+                        <outlet property="labelCantidadDias" destination="eDa-hB-Ykg" id="3Ne-Yv-MdF"/>
+                        <outlet property="labelCantidadFotos" destination="3ZQ-yl-dlj" id="ssD-An-ZJS"/>
+                        <outlet property="labelCantidadInvitados" destination="gjC-4X-VgV" id="2hz-2x-4y4"/>
+                        <outlet property="labelDetails" destination="rQe-d1-uRa" id="NBu-8F-FA8"/>
+                        <outlet property="labelDias" destination="D2p-V7-0Fa" id="oML-Wh-38r"/>
+                        <outlet property="labelFotos" destination="omI-yW-6UP" id="tBB-Ig-cAy"/>
+                        <outlet property="labelInvitados" destination="kXA-ef-hKg" id="GOf-dl-jkw"/>
+                        <outlet property="labelTitle" destination="AMu-fr-ETL" id="e3I-Er-hNs"/>
                         <outlet property="viewHeader" destination="gEd-h7-BMw" id="Z1S-2m-PPO"/>
                     </connections>
                 </viewController>
@@ -287,10 +290,75 @@
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="-953.52323838080963"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="md8-Yi-IdE">
+            <objects>
+                <viewController id="BHQ-ev-dtC" userLabel="Login" customClass="LoginViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XWg-Ch-hPu"/>
+                        <viewControllerLayoutGuide type="bottom" id="wOS-eC-0Al"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMu-yy-ehx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bz-34-E6a" userLabel="View - FiestappIcon">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="444"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bonete.png" translatesAutoresizingMaskIntoConstraints="NO" id="ShL-0t-xto">
+                                        <rect key="frame" x="105" y="62" width="165" height="245"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="F I E S T A P P !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrU-qy-IRB" userLabel="Label - AppName">
+                                        <rect key="frame" x="85" y="348" width="205" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="24"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por momentos aún mejores." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLT-42-pUB" userLabel="Label - AppSlogan">
+                                        <rect key="frame" x="85" y="376" width="205" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="12"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bdq-G6-7I6" userLabel="View - LoginButtons">
+                                <rect key="frame" x="0.0" y="443" width="375" height="224"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avf-Kk-J03">
+                                        <rect key="frame" x="15" y="88" width="344" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <state key="normal" title="BLA BLA" image="btn_facebook.png">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="facebookLoginWithSender:" destination="BHQ-ev-dtC" eventType="touchUpInside" id="Q3r-C9-m7I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewLoginButtons" destination="bdq-G6-7I6" id="rr9-qp-oxK"/>
+                        <segue destination="ycl-Z4-bQH" kind="show" identifier="segueHomeTabBarController" id="7NU-er-GUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vph-OA-Ug5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4639.1999999999998" y="-149.77511244377811"/>
+        </scene>
         <!--Home Tab Bar Controller-->
         <scene sceneID="kDJ-na-4e4">
             <objects>
-                <tabBarController id="ycl-Z4-bQH" userLabel="Home Tab Bar Controller" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="ycl-Z4-bQH" userLabel="Home Tab Bar Controller" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uGS-ba-hur">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -309,9 +377,9 @@
         <!--Nueva Fiesta Navigation Controller-->
         <scene sceneID="YoM-Ge-Bkw">
             <objects>
-                <navigationController id="Kgr-hF-gib" userLabel="Nueva Fiesta Navigation Controller" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="Kgr-hF-gib" userLabel="Nueva Fiesta Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nueva fiesta" image="ic_action_add_circle.png" id="bQG-Kh-nMP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xYJ-nD-s36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYJ-nD-s36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -349,10 +417,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3up-9d-CLO" userLabel="View - Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nueva fiesta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cop-wx-L7G" userLabel="Label - Title">
+                                        <rect key="frame" x="114" y="32" width="145" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" label="Lionel Messi"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.41960784309999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iaz-zr-tlF"/>
+                    <connections>
+                        <outlet property="viewHeader" destination="3up-9d-CLO" id="y7F-ft-8JE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="olC-kx-1Sg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,11 +463,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t67-2h-hzl" userLabel="View - Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notificaciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fw8-52-gfK" userLabel="Label - Title">
+                                        <rect key="frame" x="114" y="32" width="145" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <accessibility key="accessibilityConfiguration" label="Lionel Messi"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.41960784309999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notificaciones" id="7Y4-Oj-npP" userLabel="Icon - Notificaciones"/>
                     <navigationItem key="navigationItem" id="zWT-Lm-SgH"/>
+                    <connections>
+                        <outlet property="viewHeader" destination="t67-2h-hzl" id="Lns-DI-jgS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -392,7 +496,8 @@
         <image name="Bg_profile_fiesta.jpg" width="375" height="200"/>
         <image name="IconBack.png" width="16" height="16"/>
         <image name="IconCircleMN.png" width="100" height="100"/>
-        <image name="Screen_MisFiestas.png" width="596" height="1059"/>
+        <image name="bonete.png" width="827" height="1240"/>
+        <image name="btn_facebook.png" width="344" height="48"/>
         <image name="ic_action_add_circle.png" width="24" height="24"/>
         <image name="ic_action_notifications.png" width="24" height="24"/>
         <image name="iconTab1.png" width="25" height="25"/>

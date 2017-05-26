@@ -17,6 +17,8 @@ extension UIView {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = self.bounds
         gradient.colors = colours.map { $0.cgColor }
+        gradient.startPoint = CGPoint(x: 0, y: 1)
+        gradient.endPoint = CGPoint(x: 1, y: 0)
         gradient.locations = locations
         self.layer.insertSublayer(gradient, at: 0)
     }
@@ -42,9 +44,9 @@ class MisFiestasViewController: UIViewController {
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = true
         
-        viewHeader.applyGradient(colours: [UIColor(red: 44/255, green: 193/255, blue: 255/255, alpha: 1),
-                                           UIColor(red: 44/255, green: 93/255, blue: 255/255, alpha: 1)],
-                                 locations: [0.0, 1.0])
+        viewHeader.applyGradient(colours: [UIColor(red: 0/255, green: 177/255, blue: 255/255, alpha: 1),
+                                                 UIColor(red: 232/255, green: 0/255, blue: 166/255, alpha: 1)],
+                                       locations: [0.0, 1.0])
     }
     
     override func didReceiveMemoryWarning() {

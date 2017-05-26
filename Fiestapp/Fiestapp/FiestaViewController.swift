@@ -15,6 +15,12 @@ class FiestaViewController: UIViewController {
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelDetails: UILabel!
+    @IBOutlet var labelDias: UILabel!
+    @IBOutlet var labelFotos: UILabel!
+    @IBOutlet var labelInvitados: UILabel!
+    @IBOutlet var labelCantidadDias: UILabel!
+    @IBOutlet var labelCantidadFotos: UILabel!
+    @IBOutlet var labelCantidadInvitados: UILabel!
     @IBOutlet var back: UIButton!
     @IBAction func goBack(_ sender: UIButton) {
         if let navController = self.navigationController {
@@ -45,6 +51,10 @@ class FiestaViewController: UIViewController {
         imageProfile.layer.cornerRadius = imageProfile.frame.height/2
         imageProfile.layer.masksToBounds = false
         imageProfile.clipsToBounds = true
+        
+        labelCantidadDias.text = String(receivedData.CantidadFotos)
+        labelCantidadFotos.text = String(receivedData.CantidadFotos)
+        labelCantidadInvitados.text = String(receivedData.CantidadInvitados)
     }
     
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
@@ -57,7 +67,6 @@ class FiestaViewController: UIViewController {
     func downloadImage(url: URL, imageView: UIImageView) {
         getDataFromUrl(url: url) { (data, response, error)  in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
             DispatchQueue.main.async() { () -> Void in
                 imageView.image = UIImage(data: data)
             }
@@ -66,7 +75,6 @@ class FiestaViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
