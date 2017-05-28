@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
             
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func facebookLogin(sender: UIButton) {
         let fbLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email", "user_friends"], from: self) { (result, error) in
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
             if let error = error {
                 print("Failed to login: \(error.localizedDescription)")
                 return
@@ -68,13 +68,12 @@ class LoginViewController: UIViewController {
                     
                     return
                 }
-                
                 // Present the main view
                 if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeTabBarController") {
                     UIApplication.shared.keyWindow?.rootViewController = viewController
                     self.dismiss(animated: true, completion: nil)
                 }
             })
-        }   
+        }
     }
 }

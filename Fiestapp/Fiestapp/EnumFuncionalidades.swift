@@ -14,7 +14,6 @@ enum EnumFuncionalidades: String {
     Menu = "Menú",
     Regalos = "Lista de Regalos",
     Asistencia = "Asistencia",
-    Informacion = "Información",
     Vestimenta = "Vestimenta",
     Musica = "Música"
 }

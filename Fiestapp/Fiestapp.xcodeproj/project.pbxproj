@@ -10,7 +10,20 @@
 		93291DC61ED8AB5D003394A1 /* btn_facebook@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DC31ED8AB5D003394A1 /* btn_facebook@3x.png */; };
 		93291DC71ED8AB5D003394A1 /* btn_facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DC41ED8AB5D003394A1 /* btn_facebook.png */; };
 		93291DC81ED8AB5D003394A1 /* btn_facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DC51ED8AB5D003394A1 /* btn_facebook@2x.png */; };
+		93291DCC1ED8C3AE003394A1 /* Branding.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DC91ED8C3AE003394A1 /* Branding.png */; };
+		93291DCD1ED8C3AE003394A1 /* Branding@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DCA1ED8C3AE003394A1 /* Branding@2x.png */; };
+		93291DCE1ED8C3AE003394A1 /* Branding@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DCB1ED8C3AE003394A1 /* Branding@3x.png */; };
 		932E827E1ED643A700D680A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E827D1ED643A700D680A8 /* LoginViewController.swift */; };
+		933BC5621ED99536004F6F17 /* UbicacionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5611ED99536004F6F17 /* UbicacionModel.swift */; };
+		933BC5651ED9A875004F6F17 /* MisFiestasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5641ED9A875004F6F17 /* MisFiestasService.swift */; };
+		933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5661ED9A891004F6F17 /* FirebaseService.swift */; };
+		933BC56B1EDA07F2004F6F17 /* FiestaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */; };
+		933BC56D1EDA082A004F6F17 /* FIRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC56C1EDA082A004F6F17 /* FIRObject.swift */; };
+		933BC56F1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC56E1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift */; };
+		933BC5761EDAF887004F6F17 /* IconBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5741EDAF887004F6F17 /* IconBack@2x.png */; };
+		933BC5771EDAF887004F6F17 /* IconBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5751EDAF887004F6F17 /* IconBack@3x.png */; };
+		933BC57A1EDAF8DA004F6F17 /* IconLogout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */; };
+		933BC57B1EDAF8DA004F6F17 /* IconLogout@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5791EDAF8DA004F6F17 /* IconLogout@3x.png */; };
 		93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93567AE81EC25BA700056124 /* AppDelegate.swift */; };
 		93567AEE1EC25BA700056124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEC1EC25BA700056124 /* Main.storyboard */; };
 		93567AF01EC25BA700056124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEF1EC25BA700056124 /* Assets.xcassets */; };
@@ -21,9 +34,8 @@
 		9388A1561ECF56C800670B24 /* ic_action_add_circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */; };
 		9388A1581ECF571C00670B24 /* ic_action_notifications@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */; };
 		9388A15A1ECF572F00670B24 /* ic_action_notifications@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */; };
-		9388A15E1ECF65F100670B24 /* FiestaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15D1ECF65F100670B24 /* FiestaModel.swift */; };
+		9388A15E1ECF65F100670B24 /* FiestaModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15D1ECF65F100670B24 /* FiestaModel1.swift */; };
 		9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */; };
-		9388A1671ED1CA1D00670B24 /* AppNameAndSlogan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1661ED1CA1D00670B24 /* AppNameAndSlogan.png */; };
 		9388A16A1ED1DCF300670B24 /* Bg_profile_fiesta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */; };
 		9388A16C1ED1DE0400670B24 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A16B1ED1DE0400670B24 /* Profile.png */; };
 		93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */; };
@@ -32,8 +44,6 @@
 		93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */; };
 		93AB43CD1EC7855B008EE1B6 /* iconTab1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */; };
 		93AB43CE1EC7855B008EE1B6 /* iconTab1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */; };
-		93AB43D01EC789D8008EE1B6 /* IconBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CF1EC789D8008EE1B6 /* IconBack.png */; };
-		93AB43E01EC7AAC7008EE1B6 /* IconCircleMN.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43DF1EC7AAC7008EE1B6 /* IconCircleMN.png */; };
 		93BE3A691ED88FB900C61858 /* bonete.png in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A681ED88FB900C61858 /* bonete.png */; };
 		93BE3A781ED89BAB00C61858 /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A6F1ED89BAB00C61858 /* Ubuntu-B.ttf */; };
 		93BE3A791ED89BAB00C61858 /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A701ED89BAB00C61858 /* Ubuntu-BI.ttf */; };
@@ -54,7 +64,20 @@
 		93291DC31ED8AB5D003394A1 /* btn_facebook@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_facebook@3x.png"; sourceTree = "<group>"; };
 		93291DC41ED8AB5D003394A1 /* btn_facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_facebook.png; sourceTree = "<group>"; };
 		93291DC51ED8AB5D003394A1 /* btn_facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_facebook@2x.png"; sourceTree = "<group>"; };
+		93291DC91ED8C3AE003394A1 /* Branding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding.png; sourceTree = "<group>"; };
+		93291DCA1ED8C3AE003394A1 /* Branding@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Branding@2x.png"; sourceTree = "<group>"; };
+		93291DCB1ED8C3AE003394A1 /* Branding@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Branding@3x.png"; sourceTree = "<group>"; };
 		932E827D1ED643A700D680A8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		933BC5611ED99536004F6F17 /* UbicacionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbicacionModel.swift; sourceTree = "<group>"; };
+		933BC5641ED9A875004F6F17 /* MisFiestasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasService.swift; sourceTree = "<group>"; };
+		933BC5661ED9A891004F6F17 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel.swift; sourceTree = "<group>"; };
+		933BC56C1EDA082A004F6F17 /* FIRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRObject.swift; sourceTree = "<group>"; };
+		933BC56E1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades2.swift; sourceTree = "<group>"; };
+		933BC5741EDAF887004F6F17 /* IconBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconBack@2x.png"; sourceTree = "<group>"; };
+		933BC5751EDAF887004F6F17 /* IconBack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconBack@3x.png"; sourceTree = "<group>"; };
+		933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconLogout@2x.png"; sourceTree = "<group>"; };
+		933BC5791EDAF8DA004F6F17 /* IconLogout@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconLogout@3x.png"; sourceTree = "<group>"; };
 		93567AE51EC25BA700056124 /* fiestapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fiestapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93567AE81EC25BA700056124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93567AED1EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,9 +90,8 @@
 		9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_add_circle@3x.png"; sourceTree = "<group>"; };
 		9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@3x.png"; sourceTree = "<group>"; };
 		9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@2x.png"; sourceTree = "<group>"; };
-		9388A15D1ECF65F100670B24 /* FiestaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel.swift; sourceTree = "<group>"; };
+		9388A15D1ECF65F100670B24 /* FiestaModel1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel1.swift; sourceTree = "<group>"; };
 		9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
-		9388A1661ED1CA1D00670B24 /* AppNameAndSlogan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppNameAndSlogan.png; sourceTree = "<group>"; };
 		9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bg_profile_fiesta.jpg; sourceTree = "<group>"; };
 		9388A16B1ED1DE0400670B24 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
 		93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasViewController.swift; sourceTree = "<group>"; };
@@ -78,8 +100,6 @@
 		93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaFiestaViewController.swift; sourceTree = "<group>"; };
 		93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@2x.png"; sourceTree = "<group>"; };
 		93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@3x.png"; sourceTree = "<group>"; };
-		93AB43CF1EC789D8008EE1B6 /* IconBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconBack.png; sourceTree = "<group>"; };
-		93AB43DF1EC7AAC7008EE1B6 /* IconCircleMN.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconCircleMN.png; sourceTree = "<group>"; };
 		93BE3A681ED88FB900C61858 /* bonete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonete.png; sourceTree = "<group>"; };
 		93BE3A6F1ED89BAB00C61858 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
 		93BE3A701ED89BAB00C61858 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
@@ -123,6 +143,24 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		933BC5601ED993A6004F6F17 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */,
+				933BC56E1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		933BC5631ED9A5D3004F6F17 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				933BC5641ED9A875004F6F17 /* MisFiestasService.swift */,
+				933BC5661ED9A891004F6F17 /* FirebaseService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		93567ADC1EC25BA700056124 = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +183,9 @@
 		93567AE71EC25BA700056124 /* fiestapp */ = {
 			isa = PBXGroup;
 			children = (
+				933BC5601ED993A6004F6F17 /* Common */,
 				9388A15C1ECF654A00670B24 /* Models */,
+				933BC5631ED9A5D3004F6F17 /* Services */,
 				9388A15B1ECF651A00670B24 /* ViewControllers */,
 				93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */,
 				93567AF41EC25BA700056124 /* Info.plist */,
@@ -206,8 +246,10 @@
 		9388A15C1ECF654A00670B24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9388A15D1ECF65F100670B24 /* FiestaModel.swift */,
-				9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */,
+				9388A15D1ECF65F100670B24 /* FiestaModel1.swift */,
+				933BC5611ED99536004F6F17 /* UbicacionModel.swift */,
+				933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */,
+				933BC56C1EDA082A004F6F17 /* FIRObject.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -215,7 +257,9 @@
 		9388A1611ED1C2F600670B24 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9388A1661ED1CA1D00670B24 /* AppNameAndSlogan.png */,
+				93291DC91ED8C3AE003394A1 /* Branding.png */,
+				93291DCA1ED8C3AE003394A1 /* Branding@2x.png */,
+				93291DCB1ED8C3AE003394A1 /* Branding@3x.png */,
 				93BE3A681ED88FB900C61858 /* bonete.png */,
 			);
 			name = SplashScreen;
@@ -245,8 +289,10 @@
 		93AB43C81EC780F7008EE1B6 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				93AB43DF1EC7AAC7008EE1B6 /* IconCircleMN.png */,
-				93AB43CF1EC789D8008EE1B6 /* IconBack.png */,
+				933BC5741EDAF887004F6F17 /* IconBack@2x.png */,
+				933BC5751EDAF887004F6F17 /* IconBack@3x.png */,
+				933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */,
+				933BC5791EDAF8DA004F6F17 /* IconLogout@3x.png */,
 				93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */,
 				93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */,
 				9388A1531ECF56B900670B24 /* ic_action_add_circle@2x.png */,
@@ -356,22 +402,26 @@
 			files = (
 				93BE3A7D1ED89BAB00C61858 /* Ubuntu-M.ttf in Resources */,
 				93AB43CE1EC7855B008EE1B6 /* iconTab1@3x.png in Resources */,
-				93AB43D01EC789D8008EE1B6 /* IconBack.png in Resources */,
+				93291DCD1ED8C3AE003394A1 /* Branding@2x.png in Resources */,
 				93567AF31EC25BA700056124 /* LaunchScreen.storyboard in Resources */,
+				933BC57A1EDAF8DA004F6F17 /* IconLogout@2x.png in Resources */,
 				93DF4B6D1EC25F36004DCB81 /* GoogleService-Info.plist in Resources */,
 				93AB43CD1EC7855B008EE1B6 /* iconTab1@2x.png in Resources */,
 				93BE3A781ED89BAB00C61858 /* Ubuntu-B.ttf in Resources */,
+				933BC5761EDAF887004F6F17 /* IconBack@2x.png in Resources */,
+				93291DCE1ED8C3AE003394A1 /* Branding@3x.png in Resources */,
 				93567AF01EC25BA700056124 /* Assets.xcassets in Resources */,
 				93BE3A791ED89BAB00C61858 /* Ubuntu-BI.ttf in Resources */,
 				93291DC81ED8AB5D003394A1 /* btn_facebook@2x.png in Resources */,
 				9388A1541ECF56B900670B24 /* ic_action_add_circle@2x.png in Resources */,
 				93567AEE1EC25BA700056124 /* Main.storyboard in Resources */,
+				93291DCC1ED8C3AE003394A1 /* Branding.png in Resources */,
 				93BE3A7A1ED89BAB00C61858 /* Ubuntu-C.ttf in Resources */,
 				93BE3A7B1ED89BAB00C61858 /* Ubuntu-L.ttf in Resources */,
+				933BC57B1EDAF8DA004F6F17 /* IconLogout@3x.png in Resources */,
 				9388A1581ECF571C00670B24 /* ic_action_notifications@3x.png in Resources */,
 				93BE3A7E1ED89BAB00C61858 /* Ubuntu-MI.ttf in Resources */,
-				9388A1671ED1CA1D00670B24 /* AppNameAndSlogan.png in Resources */,
-				93AB43E01EC7AAC7008EE1B6 /* IconCircleMN.png in Resources */,
+				933BC5771EDAF887004F6F17 /* IconBack@3x.png in Resources */,
 				93BE3A7C1ED89BAB00C61858 /* Ubuntu-LI.ttf in Resources */,
 				9388A15A1ECF572F00670B24 /* ic_action_notifications@2x.png in Resources */,
 				93BE3A691ED88FB900C61858 /* bonete.png in Resources */,
@@ -440,12 +490,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933BC5621ED99536004F6F17 /* UbicacionModel.swift in Sources */,
 				93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */,
-				9388A15E1ECF65F100670B24 /* FiestaModel.swift in Sources */,
+				9388A15E1ECF65F100670B24 /* FiestaModel1.swift in Sources */,
+				933BC56D1EDA082A004F6F17 /* FIRObject.swift in Sources */,
 				937821E21EC8CD6A001A2710 /* MisFiestasTableViewController.swift in Sources */,
+				933BC56F1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift in Sources */,
 				93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */,
 				937821E01EC7AD9B001A2710 /* FiestaTableViewCell.swift in Sources */,
 				93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */,
+				933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */,
+				933BC56B1EDA07F2004F6F17 /* FiestaModel.swift in Sources */,
+				933BC5651ED9A875004F6F17 /* MisFiestasService.swift in Sources */,
 				93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */,
 				9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */,
 				932E827E1ED643A700D680A8 /* LoginViewController.swift in Sources */,

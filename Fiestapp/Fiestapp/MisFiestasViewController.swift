@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 extension UIView {
     func applyGradient(colours: [UIColor]) -> Void {
@@ -27,6 +28,14 @@ extension UIView {
 class MisFiestasViewController: UIViewController {
     //MARK: Properties
     @IBOutlet var viewHeader: UIView!
+    @IBOutlet var buttonLogout: UIButton!
+    @IBAction func logout(_ sender: UIButton) {
+        try! FIRAuth.auth()!.signOut()
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
