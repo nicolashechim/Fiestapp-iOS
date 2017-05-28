@@ -24,6 +24,7 @@
 		933BC5771EDAF887004F6F17 /* IconBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5751EDAF887004F6F17 /* IconBack@3x.png */; };
 		933BC57A1EDAF8DA004F6F17 /* IconLogout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */; };
 		933BC57B1EDAF8DA004F6F17 /* IconLogout@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5791EDAF8DA004F6F17 /* IconLogout@3x.png */; };
+		933BC57D1EDB092E004F6F17 /* Bg_profile_fiesta.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC57C1EDB092E004F6F17 /* Bg_profile_fiesta.png */; };
 		93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93567AE81EC25BA700056124 /* AppDelegate.swift */; };
 		93567AEE1EC25BA700056124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEC1EC25BA700056124 /* Main.storyboard */; };
 		93567AF01EC25BA700056124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEF1EC25BA700056124 /* Assets.xcassets */; };
@@ -36,7 +37,6 @@
 		9388A15A1ECF572F00670B24 /* ic_action_notifications@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */; };
 		9388A15E1ECF65F100670B24 /* FiestaModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15D1ECF65F100670B24 /* FiestaModel1.swift */; };
 		9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */; };
-		9388A16A1ED1DCF300670B24 /* Bg_profile_fiesta.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */; };
 		9388A16C1ED1DE0400670B24 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A16B1ED1DE0400670B24 /* Profile.png */; };
 		93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */; };
 		93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */; };
@@ -78,6 +78,7 @@
 		933BC5751EDAF887004F6F17 /* IconBack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconBack@3x.png"; sourceTree = "<group>"; };
 		933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconLogout@2x.png"; sourceTree = "<group>"; };
 		933BC5791EDAF8DA004F6F17 /* IconLogout@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconLogout@3x.png"; sourceTree = "<group>"; };
+		933BC57C1EDB092E004F6F17 /* Bg_profile_fiesta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bg_profile_fiesta.png; sourceTree = "<group>"; };
 		93567AE51EC25BA700056124 /* fiestapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fiestapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93567AE81EC25BA700056124 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93567AED1EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@2x.png"; sourceTree = "<group>"; };
 		9388A15D1ECF65F100670B24 /* FiestaModel1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel1.swift; sourceTree = "<group>"; };
 		9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
-		9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bg_profile_fiesta.jpg; sourceTree = "<group>"; };
 		9388A16B1ED1DE0400670B24 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
 		93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasViewController.swift; sourceTree = "<group>"; };
 		93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaViewController.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				9388A16B1ED1DE0400670B24 /* Profile.png */,
-				9388A1691ED1DCF300670B24 /* Bg_profile_fiesta.jpg */,
+				933BC57C1EDB092E004F6F17 /* Bg_profile_fiesta.png */,
 			);
 			name = FiestaPerfil;
 			sourceTree = "<group>";
@@ -428,8 +428,8 @@
 				93291DC61ED8AB5D003394A1 /* btn_facebook@3x.png in Resources */,
 				93BE3A7F1ED89BAB00C61858 /* Ubuntu-R.ttf in Resources */,
 				93291DC71ED8AB5D003394A1 /* btn_facebook.png in Resources */,
+				933BC57D1EDB092E004F6F17 /* Bg_profile_fiesta.png in Resources */,
 				93BE3A801ED89BAB00C61858 /* Ubuntu-RI.ttf in Resources */,
-				9388A16A1ED1DCF300670B24 /* Bg_profile_fiesta.jpg in Resources */,
 				9388A1561ECF56C800670B24 /* ic_action_add_circle@3x.png in Resources */,
 				9388A16C1ED1DE0400670B24 /* Profile.png in Resources */,
 			);

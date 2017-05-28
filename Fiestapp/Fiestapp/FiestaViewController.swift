@@ -13,6 +13,7 @@ class FiestaViewController: UIViewController {
     @IBOutlet var viewHeader: UIView!
     
     @IBOutlet var imageProfile: UIImageView!
+    @IBOutlet var imageProfileContainer: UIImageView!
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelDetails: UILabel!
     @IBOutlet var labelDias: UILabel!
@@ -51,6 +52,10 @@ class FiestaViewController: UIViewController {
         imageProfile.layer.cornerRadius = imageProfile.frame.height/2
         imageProfile.layer.masksToBounds = false
         imageProfile.clipsToBounds = true
+        
+        imageProfileContainer.layer.cornerRadius = imageProfileContainer.frame.height/2
+        imageProfileContainer.layer.masksToBounds = false
+        imageProfileContainer.clipsToBounds = true
         
         labelCantidadDias.text = String(receivedData.CantidadFotos)
         labelCantidadFotos.text = String(receivedData.CantidadFotos)
