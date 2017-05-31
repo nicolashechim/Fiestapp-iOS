@@ -19,7 +19,6 @@
 		933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5661ED9A891004F6F17 /* FirebaseService.swift */; };
 		933BC56B1EDA07F2004F6F17 /* FiestaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */; };
 		933BC56D1EDA082A004F6F17 /* FIRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC56C1EDA082A004F6F17 /* FIRObject.swift */; };
-		933BC56F1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC56E1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift */; };
 		933BC5761EDAF887004F6F17 /* IconBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5741EDAF887004F6F17 /* IconBack@2x.png */; };
 		933BC5771EDAF887004F6F17 /* IconBack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5751EDAF887004F6F17 /* IconBack@3x.png */; };
 		933BC57A1EDAF8DA004F6F17 /* IconLogout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */; };
@@ -35,7 +34,6 @@
 		9388A1561ECF56C800670B24 /* ic_action_add_circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */; };
 		9388A1581ECF571C00670B24 /* ic_action_notifications@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */; };
 		9388A15A1ECF572F00670B24 /* ic_action_notifications@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */; };
-		9388A15E1ECF65F100670B24 /* FiestaModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15D1ECF65F100670B24 /* FiestaModel1.swift */; };
 		9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */; };
 		9388A16C1ED1DE0400670B24 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A16B1ED1DE0400670B24 /* Profile.png */; };
 		93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */; };
@@ -44,6 +42,7 @@
 		93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */; };
 		93AB43CD1EC7855B008EE1B6 /* iconTab1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */; };
 		93AB43CE1EC7855B008EE1B6 /* iconTab1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */; };
+		93B8C2441EDCD837002AB484 /* FiestaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B8C2431EDCD837002AB484 /* FiestaTableViewController.swift */; };
 		93BE3A691ED88FB900C61858 /* bonete.png in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A681ED88FB900C61858 /* bonete.png */; };
 		93BE3A781ED89BAB00C61858 /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A6F1ED89BAB00C61858 /* Ubuntu-B.ttf */; };
 		93BE3A791ED89BAB00C61858 /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A701ED89BAB00C61858 /* Ubuntu-BI.ttf */; };
@@ -54,6 +53,7 @@
 		93BE3A7E1ED89BAB00C61858 /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A751ED89BAB00C61858 /* Ubuntu-MI.ttf */; };
 		93BE3A7F1ED89BAB00C61858 /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A761ED89BAB00C61858 /* Ubuntu-R.ttf */; };
 		93BE3A801ED89BAB00C61858 /* Ubuntu-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BE3A771ED89BAB00C61858 /* Ubuntu-RI.ttf */; };
+		93C8333B1EDCCDD40071F5FC /* InformacionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8333A1EDCCDD40071F5FC /* InformacionTableViewCell.swift */; };
 		93DF4B6D1EC25F36004DCB81 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */; };
 		CDA84199D2F4372299A0C5AF /* Pods_fiestapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66492BB5F9DEFE2E3CD84D5A /* Pods_fiestapp.framework */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,6 @@
 		933BC5661ED9A891004F6F17 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel.swift; sourceTree = "<group>"; };
 		933BC56C1EDA082A004F6F17 /* FIRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRObject.swift; sourceTree = "<group>"; };
-		933BC56E1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades2.swift; sourceTree = "<group>"; };
 		933BC5741EDAF887004F6F17 /* IconBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconBack@2x.png"; sourceTree = "<group>"; };
 		933BC5751EDAF887004F6F17 /* IconBack@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconBack@3x.png"; sourceTree = "<group>"; };
 		933BC5781EDAF8DA004F6F17 /* IconLogout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconLogout@2x.png"; sourceTree = "<group>"; };
@@ -91,7 +90,6 @@
 		9388A1551ECF56C800670B24 /* ic_action_add_circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_add_circle@3x.png"; sourceTree = "<group>"; };
 		9388A1571ECF571C00670B24 /* ic_action_notifications@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@3x.png"; sourceTree = "<group>"; };
 		9388A1591ECF572F00670B24 /* ic_action_notifications@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_action_notifications@2x.png"; sourceTree = "<group>"; };
-		9388A15D1ECF65F100670B24 /* FiestaModel1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel1.swift; sourceTree = "<group>"; };
 		9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
 		9388A16B1ED1DE0400670B24 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
 		93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +98,7 @@
 		93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaFiestaViewController.swift; sourceTree = "<group>"; };
 		93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@2x.png"; sourceTree = "<group>"; };
 		93AB43CC1EC7855B008EE1B6 /* iconTab1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@3x.png"; sourceTree = "<group>"; };
+		93B8C2431EDCD837002AB484 /* FiestaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaTableViewController.swift; sourceTree = "<group>"; };
 		93BE3A681ED88FB900C61858 /* bonete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonete.png; sourceTree = "<group>"; };
 		93BE3A6F1ED89BAB00C61858 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
 		93BE3A701ED89BAB00C61858 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		93BE3A751ED89BAB00C61858 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
 		93BE3A761ED89BAB00C61858 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
 		93BE3A771ED89BAB00C61858 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
+		93C8333A1EDCCDD40071F5FC /* InformacionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionTableViewCell.swift; sourceTree = "<group>"; };
 		93DF4B6C1EC25F36004DCB81 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FC4EC719A4FA3C4D99471F4 /* Pods-fiestapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiestapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-fiestapp/Pods-fiestapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */,
-				933BC56E1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -211,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */,
+				93B8C2431EDCD837002AB484 /* FiestaTableViewController.swift */,
+				93C833391EDCCD990071F5FC /* TableViewCells */,
 			);
 			name = FiestaPerfil;
 			sourceTree = "<group>";
@@ -246,7 +247,6 @@
 		9388A15C1ECF654A00670B24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9388A15D1ECF65F100670B24 /* FiestaModel1.swift */,
 				933BC5611ED99536004F6F17 /* UbicacionModel.swift */,
 				933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */,
 				933BC56C1EDA082A004F6F17 /* FIRObject.swift */,
@@ -329,6 +329,14 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		93C833391EDCCD990071F5FC /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				93C8333A1EDCCDD40071F5FC /* InformacionTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		DEAB49D17F25CEACD12AD3CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,7 +385,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 93567AE01EC25BA700056124 /* Build configuration list for PBXProject "fiestapp" */;
+			buildConfigurationList = 93567AE01EC25BA700056124 /* Build configuration list for PBXProject "Fiestapp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -492,10 +500,8 @@
 			files = (
 				933BC5621ED99536004F6F17 /* UbicacionModel.swift in Sources */,
 				93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */,
-				9388A15E1ECF65F100670B24 /* FiestaModel1.swift in Sources */,
 				933BC56D1EDA082A004F6F17 /* FIRObject.swift in Sources */,
 				937821E21EC8CD6A001A2710 /* MisFiestasTableViewController.swift in Sources */,
-				933BC56F1EDA1BBF004F6F17 /* EnumFuncionalidades2.swift in Sources */,
 				93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */,
 				937821E01EC7AD9B001A2710 /* FiestaTableViewCell.swift in Sources */,
 				93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */,
@@ -503,7 +509,9 @@
 				933BC56B1EDA07F2004F6F17 /* FiestaModel.swift in Sources */,
 				933BC5651ED9A875004F6F17 /* MisFiestasService.swift in Sources */,
 				93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */,
+				93C8333B1EDCCDD40071F5FC /* InformacionTableViewCell.swift in Sources */,
 				9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */,
+				93B8C2441EDCD837002AB484 /* FiestaTableViewController.swift in Sources */,
 				932E827E1ED643A700D680A8 /* LoginViewController.swift in Sources */,
 				93AB43C41EC77967008EE1B6 /* NotificacionesViewController.swift in Sources */,
 			);
@@ -677,7 +685,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93567AE01EC25BA700056124 /* Build configuration list for PBXProject "fiestapp" */ = {
+		93567AE01EC25BA700056124 /* Build configuration list for PBXProject "Fiestapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93567AF51EC25BA700056124 /* Debug */,

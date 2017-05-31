@@ -106,8 +106,8 @@ class MisFiestasTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow{
             let selectedRow = indexPath.row
-            let fiestaViewController = segue.destination as! FiestaViewController
-            fiestaViewController.receivedData = fiestas[selectedRow]
+            let fiestaTableViewController = segue.destination as! FiestaTableViewController
+            fiestaTableViewController.receivedData = fiestas[selectedRow]
         }
     }
 }

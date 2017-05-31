@@ -57,7 +57,7 @@ class FiestaViewController: UIViewController {
         imageProfileContainer.layer.masksToBounds = false
         imageProfileContainer.clipsToBounds = true
         
-        labelCantidadDias.text = String(receivedData.CantidadFotos)
+        labelCantidadDias.text = String(receivedData.CantidadDias)
         labelCantidadFotos.text = String(receivedData.CantidadFotos)
         labelCantidadInvitados.text = String(receivedData.CantidadInvitados)
     }
