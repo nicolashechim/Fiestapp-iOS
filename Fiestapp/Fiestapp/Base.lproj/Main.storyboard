@@ -28,7 +28,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Vz3-o5-tV3" userLabel="Mis fiestas Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mis fiestas" image="iconTab1.png" id="hC3-ks-dJf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ac6-RF-Z3C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac6-RF-Z3C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -49,7 +49,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="wYh-2Q-ohx" userLabel="Notificaciones Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notificaciones" image="ic_action_notifications.png" id="2BN-cF-51B"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2r-T7-ggx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2r-T7-ggx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -304,26 +304,26 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af3-ex-zR6">
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af3-ex-zR6">
                                             <rect key="frame" x="20" y="19" width="134" height="134"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         </mapView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03 de Julio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jr-Sf-FZE" userLabel="Label - Title">
-                                            <rect key="frame" x="170" y="21" width="180" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="03 de Septiembre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Jr-Sf-FZE" userLabel="Label - Title">
+                                            <rect key="frame" x="170" y="30" width="180" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="20"/>
                                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21:30 HS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-WD-ugp" userLabel="Label - Details">
-                                            <rect key="frame" x="170" y="50.5" width="180" height="20"/>
+                                            <rect key="frame" x="170" y="60" width="180" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
                                             <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Salón Monumental" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpO-A6-kIR" userLabel="Label - Nombre lugar">
-                                            <rect key="frame" x="170" y="74.5" width="180" height="20"/>
+                                            <rect key="frame" x="170" y="85" width="180" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="14"/>
                                             <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -375,7 +375,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDU-sP-znh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-944"/>
+            <point key="canvasLocation" x="712.79999999999995" y="-944.52773613193415"/>
         </scene>
         <!--Login-->
         <scene sceneID="md8-Yi-IdE">
@@ -456,7 +456,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Kgr-hF-gib" userLabel="Nueva Fiesta Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nueva fiesta" image="ic_action_add_circle.png" id="bQG-Kh-nMP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xYJ-nD-s36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYJ-nD-s36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

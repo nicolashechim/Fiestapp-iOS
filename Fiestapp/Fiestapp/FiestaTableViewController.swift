@@ -39,15 +39,14 @@ class FiestaTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewHeader.applyGradient(colours: [UIColor(red: 44/255, green: 193/255, blue: 255/255, alpha: 1),
-                                           UIColor(red: 44/255, green: 93/255, blue: 255/255, alpha: 1)],
-                                 locations: [0.0, 1.0])
+        
+        Common.applyGradientView(view: viewHeader)
         
         labelTitle.text = receivedData.Nombre
         labelDetails.text = receivedData.Detalle
         
         if let fiestaImageUrl = URL(string: receivedData.Imagen) {
-            downloadImage(url: fiestaImageUrl, imageView: imageProfile)
+            Common.downloadImage(url: fiestaImageUrl, imageView: imageProfile)
         }
         
         imageProfile.layer.cornerRadius = imageProfile.frame.height/2
@@ -61,22 +60,6 @@ class FiestaTableViewController: UITableViewController {
         labelCantidadDias.text = String(receivedData.CantidadDias)
         labelCantidadFotos.text = String(receivedData.CantidadFotos)
         labelCantidadInvitados.text = String(receivedData.CantidadInvitados)
-    }
-    
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
-    
-    func downloadImage(url: URL, imageView: UIImageView) {
-        getDataFromUrl(url: url) { (data, response, error)  in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async() { () -> Void in
-                imageView.image = UIImage(data: data)
-            }
-        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -95,37 +78,35 @@ class FiestaTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformacionCell", for: indexPath) as? InformacionTableViewCell else {
-            fatalError("The dequeued cell is not an instance of InformacionTableViewCell.")
+        switch indexPath.row {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformacionCell", for: indexPath) as? InformacionTableViewCell else {
+                fatalError("The dequeued cell is not an instance of InformacionTableViewCell.")
+            }
+            initInformacionCell(cell: cell)
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformacionCell", for: indexPath) as? InformacionTableViewCell else {
+                fatalError("The dequeued cell is not an instance of InformacionTableViewCell.")
+            }
+            initInformacionCell(cell: cell)
+            return cell
         }
-        
+    }
+    
+    func initInformacionCell(cell: InformacionTableViewCell) {
         cell.labelDia.text = receivedData.FechaHora
         cell.labelHora.text = receivedData.FechaHora
         cell.labelNombreLugar.text = receivedData.Ubicacion.Nombre
         
-        let initialLocation = CLLocation(latitude: -31.6432684, longitude: -60.704326)
+        Common.initMapView(mapa: cell.mapaUbicacion,
+                           latitud: Double(receivedData.Ubicacion.Latitud)!,
+                           longitud: Double(receivedData.Ubicacion.Longitud)!,
+                           zoom: 400)
+
         
-        centerMapOnLocation(location: initialLocation, cell: cell)
-        
-        cell.viewCardMask.layer.cornerRadius = 4
-        cell.viewContentCell.backgroundColor = UIColor(red: 245/255,
-                                                       green: 245/255,
-                                                       blue: 245/255,
-                                                       alpha: 1)
-        cell.viewCardMask.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
-        cell.viewCardMask.layer.masksToBounds = false
-        cell.viewCardMask.layer.shadowOpacity = 0.8
-        cell.viewCardMask.layer.shadowOffset = CGSize(width: 0, height: 0)
-        
-        return cell
+        Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
     }
-    
-    func centerMapOnLocation(location: CLLocation, cell: InformacionTableViewCell) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                  300, 300)
-        cell.mapaUbicacion.setRegion(coordinateRegion, animated: true)
-    }
-    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return cellHeight

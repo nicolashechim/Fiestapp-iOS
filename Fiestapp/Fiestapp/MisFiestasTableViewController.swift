@@ -12,7 +12,6 @@ class MisFiestasTableViewController: UITableViewController {
     
     let misFiestasService = MisFiestasService()
     var fiestas = [FiestaModel]()
-    
     let cellHeight: CGFloat = 84
     let cellIdentifier = "FiestaCell"
     
@@ -21,18 +20,16 @@ class MisFiestasTableViewController: UITableViewController {
         MisFiestasService.obtenerFiestas(viewController: self)
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     func mostrarFiestas(fiestas : Array<FiestaModel>){
         self.fiestas = fiestas
         self.tableView.reloadData()
     }
     
-    func mostrarError() {
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+    func mostrarError() {}
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,11 +46,35 @@ class MisFiestasTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FiestaTableViewCell else {
             fatalError("The dequeued cell is not an instance of FiestaTableViewCell.")
         }
-        
         let fiesta = fiestas[indexPath.row]
+        initPrototypeCell(cell: cell, fiesta: fiesta)
         
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return cellHeight
+    }
+    
+    // MARK: - Navigation
+    // method to run when table view cell is tapped
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueFiesta", sender: self)
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow{
+            let selectedRow = indexPath.row
+            let fiestaTableViewController = segue.destination as! FiestaTableViewController
+            fiestaTableViewController.receivedData = fiestas[selectedRow]
+        }
+    }
+    
+    func initPrototypeCell(cell: FiestaTableViewCell, fiesta: FiestaModel) {
         if let fiestaImageUrl = URL(string: fiesta.Imagen) {
-            downloadImage(url: fiestaImageUrl, imageView: cell.iconCircle)
+            Common.downloadImage(url: fiestaImageUrl, imageView: cell.iconCircle)
         }
         
         cell.iconCircle.layer.cornerRadius = cell.iconCircle.frame.height/2
@@ -70,44 +91,5 @@ class MisFiestasTableViewController: UITableViewController {
         cell.cardMask.layer.masksToBounds = false
         cell.cardMask.layer.shadowOpacity = 0.8
         cell.cardMask.layer.shadowOffset = CGSize(width: 0, height: 0)
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return cellHeight
-    }
-    
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
-    
-    func downloadImage(url: URL, imageView: UIImageView) {
-        getDataFromUrl(url: url) { (data, response, error)  in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            DispatchQueue.main.async() { () -> Void in
-                imageView.image = UIImage(data: data)
-            }
-        }
-    }
-    
-    // MARK: - Navigation
-    // method to run when table view cell is tapped
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "segueFiesta", sender: self)
-    }
-    
-    // This function is called before the segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow{
-            let selectedRow = indexPath.row
-            let fiestaTableViewController = segue.destination as! FiestaTableViewController
-            fiestaTableViewController.receivedData = fiestas[selectedRow]
-        }
     }
 }

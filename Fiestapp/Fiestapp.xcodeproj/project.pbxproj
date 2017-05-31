@@ -14,6 +14,9 @@
 		93291DCD1ED8C3AE003394A1 /* Branding@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DCA1ED8C3AE003394A1 /* Branding@2x.png */; };
 		93291DCE1ED8C3AE003394A1 /* Branding@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93291DCB1ED8C3AE003394A1 /* Branding@3x.png */; };
 		932E827E1ED643A700D680A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932E827D1ED643A700D680A8 /* LoginViewController.swift */; };
+		9338CF7D1EDEEB2B00D7A357 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF7C1EDEEB2B00D7A357 /* UIViewExtension.swift */; };
+		9338CF7F1EDEF55600D7A357 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF7E1EDEF55600D7A357 /* Common.swift */; };
+		9338CF811EDF01FD00D7A357 /* MeGustasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF801EDF01FD00D7A357 /* MeGustasTableViewCell.swift */; };
 		933BC5621ED99536004F6F17 /* UbicacionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5611ED99536004F6F17 /* UbicacionModel.swift */; };
 		933BC5651ED9A875004F6F17 /* MisFiestasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5641ED9A875004F6F17 /* MisFiestasService.swift */; };
 		933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5661ED9A891004F6F17 /* FirebaseService.swift */; };
@@ -68,6 +71,9 @@
 		93291DCA1ED8C3AE003394A1 /* Branding@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Branding@2x.png"; sourceTree = "<group>"; };
 		93291DCB1ED8C3AE003394A1 /* Branding@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Branding@3x.png"; sourceTree = "<group>"; };
 		932E827D1ED643A700D680A8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9338CF7C1EDEEB2B00D7A357 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		9338CF7E1EDEF55600D7A357 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		9338CF801EDF01FD00D7A357 /* MeGustasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasTableViewCell.swift; sourceTree = "<group>"; };
 		933BC5611ED99536004F6F17 /* UbicacionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbicacionModel.swift; sourceTree = "<group>"; };
 		933BC5641ED9A875004F6F17 /* MisFiestasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasService.swift; sourceTree = "<group>"; };
 		933BC5661ED9A891004F6F17 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */,
+				9338CF7C1EDEEB2B00D7A357 /* UIViewExtension.swift */,
+				9338CF7E1EDEF55600D7A357 /* Common.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -333,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				93C8333A1EDCCDD40071F5FC /* InformacionTableViewCell.swift */,
+				9338CF801EDF01FD00D7A357 /* MeGustasTableViewCell.swift */,
 			);
 			name = TableViewCells;
 			sourceTree = "<group>";
@@ -502,11 +511,14 @@
 				93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */,
 				933BC56D1EDA082A004F6F17 /* FIRObject.swift in Sources */,
 				937821E21EC8CD6A001A2710 /* MisFiestasTableViewController.swift in Sources */,
+				9338CF7F1EDEF55600D7A357 /* Common.swift in Sources */,
 				93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */,
 				937821E01EC7AD9B001A2710 /* FiestaTableViewCell.swift in Sources */,
 				93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */,
 				933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */,
+				9338CF7D1EDEEB2B00D7A357 /* UIViewExtension.swift in Sources */,
 				933BC56B1EDA07F2004F6F17 /* FiestaModel.swift in Sources */,
+				9338CF811EDF01FD00D7A357 /* MeGustasTableViewCell.swift in Sources */,
 				933BC5651ED9A875004F6F17 /* MisFiestasService.swift in Sources */,
 				93567AE91EC25BA700056124 /* AppDelegate.swift in Sources */,
 				93C8333B1EDCCDD40071F5FC /* InformacionTableViewCell.swift in Sources */,

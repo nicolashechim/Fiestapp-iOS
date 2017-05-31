@@ -20,9 +20,7 @@ class NotificacionesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewHeader.applyGradient(colours: [UIColor(red: 0/255, green: 177/255, blue: 255/255, alpha: 1),
-                                           UIColor(red: 232/255, green: 0/255, blue: 166/255, alpha: 1)],
-                                 locations: [0.0, 1.0])
+        Common.applyGradientView(view: viewHeader)
     }
     
     override func didReceiveMemoryWarning() {
