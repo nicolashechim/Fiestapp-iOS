@@ -17,6 +17,7 @@
 		9338CF7D1EDEEB2B00D7A357 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF7C1EDEEB2B00D7A357 /* UIViewExtension.swift */; };
 		9338CF7F1EDEF55600D7A357 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF7E1EDEF55600D7A357 /* Common.swift */; };
 		9338CF811EDF01FD00D7A357 /* MeGustasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF801EDF01FD00D7A357 /* MeGustasTableViewCell.swift */; };
+		9338CF831EDF13E000D7A357 /* EnumFiestasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9338CF821EDF13E000D7A357 /* EnumFiestasCell.swift */; };
 		933BC5621ED99536004F6F17 /* UbicacionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5611ED99536004F6F17 /* UbicacionModel.swift */; };
 		933BC5651ED9A875004F6F17 /* MisFiestasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5641ED9A875004F6F17 /* MisFiestasService.swift */; };
 		933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933BC5661ED9A891004F6F17 /* FirebaseService.swift */; };
@@ -40,7 +41,6 @@
 		9388A1601ECF664900670B24 /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */; };
 		9388A16C1ED1DE0400670B24 /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 9388A16B1ED1DE0400670B24 /* Profile.png */; };
 		93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */; };
-		93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */; };
 		93AB43C41EC77967008EE1B6 /* NotificacionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C31EC77967008EE1B6 /* NotificacionesViewController.swift */; };
 		93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */; };
 		93AB43CD1EC7855B008EE1B6 /* iconTab1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */; };
@@ -74,6 +74,7 @@
 		9338CF7C1EDEEB2B00D7A357 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		9338CF7E1EDEF55600D7A357 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		9338CF801EDF01FD00D7A357 /* MeGustasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasTableViewCell.swift; sourceTree = "<group>"; };
+		9338CF821EDF13E000D7A357 /* EnumFiestasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFiestasCell.swift; sourceTree = "<group>"; };
 		933BC5611ED99536004F6F17 /* UbicacionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbicacionModel.swift; sourceTree = "<group>"; };
 		933BC5641ED9A875004F6F17 /* MisFiestasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasService.swift; sourceTree = "<group>"; };
 		933BC5661ED9A891004F6F17 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
 		9388A16B1ED1DE0400670B24 /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
 		93AB43BF1EC7782C008EE1B6 /* MisFiestasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasViewController.swift; sourceTree = "<group>"; };
-		93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaViewController.swift; sourceTree = "<group>"; };
 		93AB43C31EC77967008EE1B6 /* NotificacionesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificacionesViewController.swift; sourceTree = "<group>"; };
 		93AB43C51EC77A01008EE1B6 /* NuevaFiestaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NuevaFiestaViewController.swift; sourceTree = "<group>"; };
 		93AB43CB1EC7855B008EE1B6 /* iconTab1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@2x.png"; sourceTree = "<group>"; };
@@ -152,9 +152,10 @@
 		933BC5601ED993A6004F6F17 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9338CF7E1EDEF55600D7A357 /* Common.swift */,
+				9338CF821EDF13E000D7A357 /* EnumFiestasCell.swift */,
 				9388A15F1ECF664900670B24 /* EnumFuncionalidades.swift */,
 				9338CF7C1EDEEB2B00D7A357 /* UIViewExtension.swift */,
-				9338CF7E1EDEF55600D7A357 /* Common.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -217,7 +218,6 @@
 		9388A1501ECF517400670B24 /* FiestaPerfil */ = {
 			isa = PBXGroup;
 			children = (
-				93AB43C11EC7787D008EE1B6 /* FiestaViewController.swift */,
 				93B8C2431EDCD837002AB484 /* FiestaTableViewController.swift */,
 				93C833391EDCCD990071F5FC /* TableViewCells */,
 			);
@@ -255,9 +255,9 @@
 		9388A15C1ECF654A00670B24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				933BC5611ED99536004F6F17 /* UbicacionModel.swift */,
 				933BC56A1EDA07F2004F6F17 /* FiestaModel.swift */,
 				933BC56C1EDA082A004F6F17 /* FIRObject.swift */,
+				933BC5611ED99536004F6F17 /* UbicacionModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -508,13 +508,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				933BC5621ED99536004F6F17 /* UbicacionModel.swift in Sources */,
-				93AB43C21EC7787D008EE1B6 /* FiestaViewController.swift in Sources */,
 				933BC56D1EDA082A004F6F17 /* FIRObject.swift in Sources */,
 				937821E21EC8CD6A001A2710 /* MisFiestasTableViewController.swift in Sources */,
 				9338CF7F1EDEF55600D7A357 /* Common.swift in Sources */,
 				93AB43C01EC7782C008EE1B6 /* MisFiestasViewController.swift in Sources */,
 				937821E01EC7AD9B001A2710 /* FiestaTableViewCell.swift in Sources */,
 				93AB43C61EC77A01008EE1B6 /* NuevaFiestaViewController.swift in Sources */,
+				9338CF831EDF13E000D7A357 /* EnumFiestasCell.swift in Sources */,
 				933BC5671ED9A891004F6F17 /* FirebaseService.swift in Sources */,
 				9338CF7D1EDEEB2B00D7A357 /* UIViewExtension.swift in Sources */,
 				933BC56B1EDA07F2004F6F17 /* FiestaModel.swift in Sources */,

@@ -54,5 +54,12 @@ class Common {
         viewMask.layer.shadowOpacity = 0.8
         viewMask.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
-
+    
+    class func goToMap(latitud: Double, longitud: Double, nombreDestino: String) {
+        let coordinates = CLLocationCoordinate2DMake(latitud, longitud)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinates, addressDictionary:nil))
+        
+        mapItem.name = nombreDestino
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+    }
 }

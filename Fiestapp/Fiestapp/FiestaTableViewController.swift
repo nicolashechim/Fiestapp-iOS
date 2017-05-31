@@ -11,6 +11,7 @@ import MapKit
 
 class FiestaTableViewController: UITableViewController {
     
+    //MARK: Properties
     @IBOutlet var viewHeader: UIView!
     @IBOutlet var imageProfile: UIImageView!
     @IBOutlet var imageProfileContainer: UIImageView!
@@ -41,7 +42,74 @@ class FiestaTableViewController: UITableViewController {
         super.viewDidLoad()
         
         Common.applyGradientView(view: viewHeader)
+        initTableViewHeader()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2//receivedData.Funcionalidades.count + 1 -> InformacionCell
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        var cell = UITableViewCell()
+        if(indexPath.row == EnumFiestasCell.Informacion.hashValue)
+        {
+            guard let cellInfo = tableView.dequeueReusableCell(withIdentifier: EnumFiestasCell.Informacion.rawValue, for: indexPath) as? InformacionTableViewCell else {
+                fatalError("The dequeued cell is not an instance of" + EnumFiestasCell.Informacion.rawValue +  ".")
+            }
+            initInformacionCell(cell: cellInfo)
+            cell = cellInfo
+        }
+            // La fiesta tiene la funcionalidad "¡Me gustás!" ?
+        else if receivedData.Funcionalidades.contains(EnumFuncionalidades.MeGustas) {
+            guard let cellMeGustas = tableView.dequeueReusableCell(withIdentifier: EnumFiestasCell.MeGustas.rawValue, for: indexPath) as? MeGustasTableViewCell else {
+                fatalError("The dequeued cell is not an instance of" + EnumFiestasCell.MeGustas.rawValue +  ".")
+            }
+            initMeGustasCell(cell: cellMeGustas)
+            cell = cellMeGustas
+        }
+        return cell
+    }
+    
+    func initInformacionCell(cell: InformacionTableViewCell) {
+        cell.labelDia.text = receivedData.FechaHora
+        cell.labelHora.text = receivedData.FechaHora
+        cell.labelNombreLugar.text = receivedData.Ubicacion.Nombre
         
+        Common.initMapView(mapa: cell.mapaUbicacion,
+                           latitud: Double(receivedData.Ubicacion.Latitud)!,
+                           longitud: Double(receivedData.Ubicacion.Longitud)!,
+                           zoom: 400)
+        
+        Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
+    }
+    
+    func initMeGustasCell(cell: MeGustasTableViewCell) {
+        cell.imageViewUsuario1.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
+        cell.imageViewUsuario1.layer.masksToBounds = false
+        cell.imageViewUsuario1.clipsToBounds = true
+        
+        cell.imageViewUsuario2.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
+        cell.imageViewUsuario2.layer.masksToBounds = false
+        cell.imageViewUsuario2.clipsToBounds = true
+        
+        cell.imageViewUsuario3.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
+        cell.imageViewUsuario3.layer.masksToBounds = false
+        cell.imageViewUsuario3.clipsToBounds = true
+        
+        Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
+    }
+    
+    func initTableViewHeader() {
         labelTitle.text = receivedData.Nombre
         labelDetails.text = receivedData.Detalle
         
@@ -62,62 +130,23 @@ class FiestaTableViewController: UITableViewController {
         labelCantidadInvitados.text = String(receivedData.CantidadInvitados)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//fiestas.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        
-        switch indexPath.row {
-        case 0:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformacionCell", for: indexPath) as? InformacionTableViewCell else {
-                fatalError("The dequeued cell is not an instance of InformacionTableViewCell.")
-            }
-            initInformacionCell(cell: cell)
-            return cell
-        default:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "InformacionCell", for: indexPath) as? InformacionTableViewCell else {
-                fatalError("The dequeued cell is not an instance of InformacionTableViewCell.")
-            }
-            initInformacionCell(cell: cell)
-            return cell
-        }
-    }
-    
-    func initInformacionCell(cell: InformacionTableViewCell) {
-        cell.labelDia.text = receivedData.FechaHora
-        cell.labelHora.text = receivedData.FechaHora
-        cell.labelNombreLugar.text = receivedData.Ubicacion.Nombre
-        
-        Common.initMapView(mapa: cell.mapaUbicacion,
-                           latitud: Double(receivedData.Ubicacion.Latitud)!,
-                           longitud: Double(receivedData.Ubicacion.Longitud)!,
-                           zoom: 400)
-
-        
-        Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
-    }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return cellHeight
     }
+    
+    // MARK: - Navigation
+    // method to run when table view cell is tapped
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //self.performSegue(withIdentifier: "segueFiesta", sender: self)
+        
+        if(indexPath.row == EnumFiestasCell.Informacion.hashValue) {
+            Common.goToMap(latitud: Double(receivedData.Ubicacion.Latitud)!, longitud: Double(receivedData.Ubicacion.Longitud)!, nombreDestino: receivedData.Ubicacion.Nombre)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     /*
-     // MARK: - Navigation
-     // method to run when table view cell is tapped
-     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     self.performSegue(withIdentifier: "segueFiesta", sender: self)
-     }
-     
      // This function is called before the segue
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      if let indexPath = tableView.indexPathForSelectedRow{
