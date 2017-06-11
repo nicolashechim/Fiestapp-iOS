@@ -22,6 +22,7 @@ class FiestaModel : NSObject {
     var CantidadFotos: Int    = 0
     var CantidadInvitados: Int   = 0
     var Funcionalidades = [EnumFuncionalidades]()
+    var Usuarios = [UsuarioModel]()
     
     //MARK: Initialization
     override init() {
@@ -35,6 +36,7 @@ class FiestaModel : NSObject {
         self.CantidadFotos = 0
         self.CantidadInvitados = 0
         self.Funcionalidades = [EnumFuncionalidades]()
+        self.Usuarios = [UsuarioModel]()
     }
     
     // Mapping entre el nodo Fiesta de Firebase y mi clase FiestaModel
@@ -95,6 +97,16 @@ class FiestaModel : NSObject {
                         }
                     }
                     break;
+                    
+                case "Usuarios":
+                    while let childOfChildSnapshot = childOfChild.nextObject() as? FIRDataSnapshot {
+                        let idUsuario = childOfChildSnapshot.value as! String
+                        let invitado = UsuarioModel()
+                        invitado.Id = idUsuario
+                        self.Usuarios.append(invitado)
+                    }
+                    break;
+                    
                 default:
                     break;
                 }

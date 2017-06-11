@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BHQ-ev-dtC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BHQ-ev-dtC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,7 +27,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Vz3-o5-tV3" userLabel="Mis fiestas Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mis fiestas" image="iconTab1.png" id="hC3-ks-dJf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ac6-RF-Z3C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac6-RF-Z3C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -48,7 +48,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="wYh-2Q-ohx" userLabel="Notificaciones Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notificaciones" image="ic_action_notifications.png" id="2BN-cF-51B"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2r-T7-ggx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2r-T7-ggx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -365,18 +365,15 @@
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-P6-Ew5" userLabel="Image - Usuario1">
                                             <rect key="frame" x="31" y="17" width="86" height="86"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-kY-lcT" userLabel="Image - Usuario2">
                                             <rect key="frame" x="143" y="17" width="86" height="86"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="500-RX-1nZ" userLabel="Image - Usuario3">
                                             <rect key="frame" x="255" y="17" width="86" height="86"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGh-ux-Auc" userLabel="Button QuienTeGusta">
                                             <rect key="frame" x="232" y="110" width="119" height="30"/>
@@ -419,6 +416,7 @@
                         <outlet property="labelInvitados" destination="15r-Nm-6Qa" id="3jM-A7-NoL"/>
                         <outlet property="labelTitle" destination="gHt-FL-laH" id="dTY-Cb-GuG"/>
                         <outlet property="viewHeader" destination="cgN-mM-CJS" id="np6-kV-HyK"/>
+                        <segue destination="tK8-gq-nGQ" kind="show" identifier="segueMeGustas" id="w4m-YJ-7Td"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDU-sP-znh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -504,7 +502,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Kgr-hF-gib" userLabel="Nueva Fiesta Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nueva fiesta" image="ic_action_add_circle.png" id="bQG-Kh-nMP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xYJ-nD-s36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYJ-nD-s36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -616,6 +614,88 @@
             </objects>
             <point key="canvasLocation" x="-1039" y="596"/>
         </scene>
+        <!--Me Gustas-->
+        <scene sceneID="d9n-ar-eH5">
+            <objects>
+                <viewController id="tK8-gq-nGQ" userLabel="Me Gustas" customClass="BackgroundAnimationViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t1o-bk-Lw5"/>
+                        <viewControllerLayoutGuide type="bottom" id="vz6-g9-mc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rqy-Kv-V2U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ebY-ed-5Gb" userLabel="View - Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zja-Z3-doe" userLabel="Button - Back">
+                                        <rect key="frame" x="5" y="23" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="IconBack.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="tK8-gq-nGQ" eventType="touchUpInside" id="Fwa-D8-AIr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Quién te gusta?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCZ-pj-HqP" userLabel="Label - Title">
+                                        <rect key="frame" x="115" y="32" width="144" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDE-12-0Y4" customClass="CustomKolodaView" customModule="fiestapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="70" width="375" height="478"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-Sn-Ks2" userLabel="Button - Nope">
+                                <rect key="frame" x="100" y="480" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ic_nope.png">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButtonTapped" destination="tK8-gq-nGQ" eventType="touchUpInside" id="8Jz-cY-Ghg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-kP-FXX" userLabel="Button - Like">
+                                <rect key="frame" x="230" y="480" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ic_like.png">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButtonTapped" destination="tK8-gq-nGQ" eventType="touchUpInside" id="Wfp-YH-FiI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-4T-hJ4" userLabel="Button - Reset">
+                                <rect key="frame" x="165" y="480" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ic_undo.png">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="undoButtonTapped" destination="tK8-gq-nGQ" eventType="touchUpInside" id="iw1-5W-dMl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="kolodaView" destination="cDE-12-0Y4" id="Kqe-Qa-qgO"/>
+                        <outlet property="viewHeader" destination="ebY-ed-5Gb" id="Z51-mW-FdI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hsc-gM-JG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1653.5999999999999" y="-943.6281859070466"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Bg_profile_fiesta.png" width="750" height="400"/>
@@ -626,6 +706,9 @@
         <image name="btn_facebook.png" width="344" height="48"/>
         <image name="ic_action_add_circle.png" width="24" height="24"/>
         <image name="ic_action_notifications.png" width="24" height="24"/>
+        <image name="ic_like.png" width="54" height="54"/>
+        <image name="ic_nope.png" width="54" height="54"/>
+        <image name="ic_undo.png" width="44" height="44"/>
         <image name="iconTab1.png" width="25" height="25"/>
     </resources>
 </document>

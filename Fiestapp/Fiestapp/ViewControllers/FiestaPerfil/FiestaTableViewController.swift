@@ -8,6 +8,8 @@
 
 import UIKit
 import MapKit
+import FBSDKLoginKit
+import FBSDKCoreKit
 
 class FiestaTableViewController: UITableViewController {
     
@@ -106,7 +108,18 @@ class FiestaTableViewController: UITableViewController {
         cell.imageViewUsuario3.layer.masksToBounds = false
         cell.imageViewUsuario3.clipsToBounds = true
         
+        let threeRandomUsers = receivedData.Usuarios.choose(3)
+        var urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: threeRandomUsers[0].Id, height: 200, width: 200)
+        cell.imageViewUsuario1.downloadedFrom(url: urlFotoPerfil)
+        
+        urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: threeRandomUsers[1].Id, height: 200, width: 200)
+        cell.imageViewUsuario2.downloadedFrom(url: urlFotoPerfil)
+        
+        urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: threeRandomUsers[2].Id, height: 200, width: 200)
+        cell.imageViewUsuario3.downloadedFrom(url: urlFotoPerfil)
+        
         Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
+        
     }
     
     func initTableViewHeader() {
@@ -138,22 +151,44 @@ class FiestaTableViewController: UITableViewController {
     // MARK: - Navigation
     // method to run when table view cell is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //self.performSegue(withIdentifier: "segueFiesta", sender: self)
-        
         if(indexPath.row == EnumFiestasCell.Informacion.hashValue) {
             Common.goToMap(latitud: Double(receivedData.Ubicacion.Latitud)!, longitud: Double(receivedData.Ubicacion.Longitud)!, nombreDestino: receivedData.Ubicacion.Nombre)
+        }
+        else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1) {
+            self.performSegue(withIdentifier: "segueMeGustas", sender: self)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    /*
-     // This function is called before the segue
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if let indexPath = tableView.indexPathForSelectedRow{
-     let selectedRow = indexPath.row
-     let fiestaViewController = segue.destination as! FiestaViewController
-     //fiestaViewController.receivedData = fiestas[selectedRow]
-     }
-     }
-     */
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueMeGustas" {
+            let backgroundAnimationViewController = segue.destination as! BackgroundAnimationViewController
+            completarDatosInvitadosFacebook()
+            backgroundAnimationViewController.setInvitados(usuarios: self.receivedData.Usuarios)
+        }
+    }
+   
+    func completarDatosInvitadosFacebook() {
+        for usuario in receivedData.Usuarios {
+            let urlFotoPerfil =
+                FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: usuario.Id,
+                                                              height: 1080,
+                                                              width: 1080)
+            usuario.FotoPerfil.downloadedFrom(url: urlFotoPerfil)
+           
+            FBSDKGraphRequest(graphPath: usuario.Id, parameters: ["fields": "name, gender"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil) {
+                    let fbDetails = result as! NSDictionary
+                    
+                    usuario.Nombre = fbDetails.value(forKey: "name") as! String
+                    if String(describing: fbDetails.value(forKey: "gender")) != "nil" {
+                        usuario.Genero = EnumGenero(rawValue: fbDetails.value(forKey: "gender") as! String)
+                    }
+                    
+                    print(fbDetails)
+                }
+            })
+        }
+    }
 }
