@@ -12,30 +12,28 @@ import Firebase
 class FiestaModel : NSObject {
     
     //MARK: Properties
-    var key: String = ""
-    var Nombre: String  = ""
+    var CantidadDias: Int = 0
+    var CantidadInvitados: String = ""
     var Detalle: String = ""
-    var FechaHora: String   = ""
-    var Imagen: String  = ""
-    var Ubicacion = UbicacionModel()
-    var CantidadDias: Int   = 0
-    var CantidadFotos: Int    = 0
-    var CantidadInvitados: Int   = 0
+    var FechaHora: String = ""
     var Funcionalidades = [EnumFuncionalidades]()
+    var Imagen: String  = ""
+    var key: String = ""
+    var Nombre: String = ""
+    var Ubicacion = UbicacionModel()
     var Usuarios = [UsuarioModel]()
     
     //MARK: Initialization
     override init() {
-        self.key = ""
-        self.Nombre = ""
+        self.CantidadDias = 0
+        self.CantidadInvitados = ""
         self.Detalle = ""
         self.FechaHora = ""
-        self.Imagen = ""
-        self.Ubicacion = UbicacionModel()
-        self.CantidadDias = 0
-        self.CantidadFotos = 0
-        self.CantidadInvitados = 0
         self.Funcionalidades = [EnumFuncionalidades]()
+        self.Imagen = ""
+        self.key = ""
+        self.Nombre = ""
+        self.Ubicacion = UbicacionModel()
         self.Usuarios = [UsuarioModel]()
     }
     
@@ -112,5 +110,6 @@ class FiestaModel : NSObject {
                 }
             }
         }
+        self.CantidadDias = Common.countDaysTo(fecha: self.FechaHora);
     }
 }

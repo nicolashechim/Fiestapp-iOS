@@ -126,4 +126,18 @@ class Common {
         
         return mes;
     }
+    
+    class func countDaysTo(fecha: String) -> Int {
+        let hasta = getFechaHoraDate(fecha: fecha)
+        let today = Date()
+        
+        let calendar = NSCalendar.current
+        
+        let date1 = calendar.startOfDay(for: today)
+        let date2 = calendar.startOfDay(for: hasta)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        
+        return components.day! < 0 ? 0 : components.day!
+    }
 }
