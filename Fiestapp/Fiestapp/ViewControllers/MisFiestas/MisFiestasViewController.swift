@@ -10,15 +10,28 @@ import UIKit
 import FirebaseAuth
 
 class MisFiestasViewController: UIViewController {
+    
     //MARK: Properties
     @IBOutlet var viewHeader: UIView!
     @IBOutlet var buttonLogout: UIButton!
     @IBAction func logout(_ sender: UIButton) {
-        try! FIRAuth.auth()!.signOut()
-        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
-            UIApplication.shared.keyWindow?.rootViewController = viewController
-            self.dismiss(animated: true, completion: nil)
-        }
+        let alertController = UIAlertController(title: "Cerrar sesión", message: "¿Seguro que quieres cerrar sesión? Necesitas estar logueado para utilizar Fiestapp!", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel) {
+            (result : UIAlertAction) -> Void in
+        })
+        
+        alertController.addAction(UIAlertAction(title: "Sí", style: UIAlertActionStyle.destructive)
+        {
+            (result : UIAlertAction) -> Void in
+            try! FIRAuth.auth()!.signOut()
+            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -43,5 +56,5 @@ class MisFiestasViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    }    
 }

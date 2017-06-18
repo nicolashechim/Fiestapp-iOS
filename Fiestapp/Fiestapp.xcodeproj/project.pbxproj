@@ -72,6 +72,10 @@
 		93567AF01EC25BA700056124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEF1EC25BA700056124 /* Assets.xcassets */; };
 		93567AF31EC25BA700056124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AF11EC25BA700056124 /* LaunchScreen.storyboard */; };
 		937392A21EEC48E300DADD23 /* UsuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937392A11EEC48E300DADD23 /* UsuarioModel.swift */; };
+		93ADDC081EF5957B00D48DA0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */; };
+		93ADDC0A1EF597BF00D48DA0 /* ProgressOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */; };
+		93ADDC0D1EF68F6000D48DA0 /* ic_meGustasCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */; };
+		93ADDC0E1EF68F6000D48DA0 /* ic_meGustasCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ADDC0C1EF68F6000D48DA0 /* ic_meGustasCell@2x.png */; };
 		93CB917A1EEAE60900DA4340 /* ic_nope.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CB91771EEAE60800DA4340 /* ic_nope.png */; };
 		93CB917B1EEAE60900DA4340 /* ic_nope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CB91781EEAE60900DA4340 /* ic_nope@2x.png */; };
 		93CB917C1EEAE60900DA4340 /* ic_nope@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93CB91791EEAE60900DA4340 /* ic_nope@3x.png */; };
@@ -157,6 +161,10 @@
 		93567AEF1EC25BA700056124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93567AF21EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937392A11EEC48E300DADD23 /* UsuarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioModel.swift; sourceTree = "<group>"; };
+		93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressOverlayView.swift; sourceTree = "<group>"; };
+		93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_meGustasCell.png; sourceTree = "<group>"; };
+		93ADDC0C1EF68F6000D48DA0 /* ic_meGustasCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_meGustasCell@2x.png"; sourceTree = "<group>"; };
 		93CB91771EEAE60800DA4340 /* ic_nope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_nope.png; sourceTree = "<group>"; };
 		93CB91781EEAE60900DA4340 /* ic_nope@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nope@2x.png"; sourceTree = "<group>"; };
 		93CB91791EEAE60900DA4340 /* ic_nope@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_nope@3x.png"; sourceTree = "<group>"; };
@@ -217,6 +225,8 @@
 				932AF1401EE8909300BB0D1F /* EnumFuncionalidades.swift */,
 				932AF1411EE8909300BB0D1F /* UIViewExtension.swift */,
 				931C5ABD1EED55DB00BD0C0C /* ArrayExtension.swift */,
+				93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */,
+				93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */,
 			);
 			name = Common;
 			path = Fiestapp/Common;
@@ -463,6 +473,8 @@
 				93CB917D1EEAE69600DA4340 /* ic_like.png */,
 				93CB917E1EEAE69600DA4340 /* ic_like@2x.png */,
 				93CB917F1EEAE69600DA4340 /* ic_like@3x.png */,
+				93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */,
+				93ADDC0C1EF68F6000D48DA0 /* ic_meGustasCell@2x.png */,
 				93CB91771EEAE60800DA4340 /* ic_nope.png */,
 				93CB91781EEAE60900DA4340 /* ic_nope@2x.png */,
 				93CB91791EEAE60900DA4340 /* ic_nope@3x.png */,
@@ -562,6 +574,7 @@
 				932AF1A81EE8A81500BB0D1F /* Ubuntu-B.ttf in Resources */,
 				932AF1B41EE8A81500BB0D1F /* ic_action_notifications@3x.png in Resources */,
 				932AF1BF1EE8A81500BB0D1F /* Branding@2x.png in Resources */,
+				93ADDC0D1EF68F6000D48DA0 /* ic_meGustasCell.png in Resources */,
 				932AF1A91EE8A81500BB0D1F /* Ubuntu-BI.ttf in Resources */,
 				931C5ADA1EEDE51000BD0C0C /* SwipeCardNope@2x.png in Resources */,
 				93CB91811EEAE69600DA4340 /* ic_like@2x.png in Resources */,
@@ -569,6 +582,7 @@
 				932AF1AE1EE8A81500BB0D1F /* Ubuntu-MI.ttf in Resources */,
 				932AF1BD1EE8A81500BB0D1F /* bonete.png in Resources */,
 				932AF1C01EE8A81500BB0D1F /* Branding@3x.png in Resources */,
+				93ADDC0E1EF68F6000D48DA0 /* ic_meGustasCell@2x.png in Resources */,
 				93CB91951EEB0C8800DA4340 /* ic_undo@2x.png in Resources */,
 				932AF1BA1EE8A81500BB0D1F /* iconTab1@3x.png in Resources */,
 				932AF1B01EE8A81500BB0D1F /* Ubuntu-RI.ttf in Resources */,
@@ -682,10 +696,12 @@
 				93CB918E1EEB0BC400DA4340 /* CustomKolodaView.swift in Sources */,
 				932AF1821EE8A6D500BB0D1F /* AppDelegate.swift in Sources */,
 				932AF1741EE8A3CF00BB0D1F /* MisFiestasTableViewController.swift in Sources */,
+				93ADDC081EF5957B00D48DA0 /* UIColorExtension.swift in Sources */,
 				932AF16D1EE8A3CF00BB0D1F /* BackgroundAnimationViewController.swift in Sources */,
 				932AF1451EE8909300BB0D1F /* UIViewExtension.swift in Sources */,
 				932AF1441EE8909300BB0D1F /* EnumFuncionalidades.swift in Sources */,
 				931C5AC21EEDA40700BD0C0C /* EnumGenero.swift in Sources */,
+				93ADDC0A1EF597BF00D48DA0 /* ProgressOverlayView.swift in Sources */,
 				932AF1761EE8A3CF00BB0D1F /* NotificacionesViewController.swift in Sources */,
 				931C5ABE1EED55DB00BD0C0C /* ArrayExtension.swift in Sources */,
 				931C5AC01EED98E300BD0C0C /* UIImageViewExtension.swift in Sources */,

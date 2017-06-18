@@ -43,9 +43,9 @@ class Common {
         }
     }
     
-    class func initCardMaskCell(viewCell: UIView, viewMask: UIView) {
+    class func initCardMaskCell(viewContent: UIView, viewMask: UIView) {
         viewMask.layer.cornerRadius = 4
-        viewCell.backgroundColor = UIColor(red: 245/255,
+        viewContent.backgroundColor = UIColor(red: 245/255,
                                            green: 245/255,
                                            blue: 245/255,
                                            alpha: 1)
@@ -61,5 +61,69 @@ class Common {
         
         mapItem.name = nombreDestino
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+    }
+    
+    class func getFechaHoraDate(fecha: String) -> Date {
+        return Date(timeIntervalSince1970: (Double(fecha)! / 1000.0))
+    }
+    
+    class func getFechaHoraString(fecha: String) -> String {
+        let date = getFechaHoraDate(fecha: fecha)
+        let dateFormatter = DateFormatter();
+        dateFormatter.dateFormat = "dd/MM/yyyy | HH:mm'hs'";
+        
+        return dateFormatter.string(from: date);
+    }
+    
+    class func getDiaMes(fecha: String) -> String {
+        let date = getFechaHoraDate(fecha: fecha)
+        let diaFormatter = DateFormatter();
+        let mesFormatter = DateFormatter();
+        diaFormatter.dateFormat = "dd";
+        mesFormatter.dateFormat = "MM";
+        
+        return diaFormatter.string(from: date) + " de " + getNombreMes(nroMes: Int(mesFormatter.string(from: date))!);
+    }
+    
+    class func getHora(fecha: String) -> String {
+        let date = getFechaHoraDate(fecha: fecha)
+        let horaFormatter = DateFormatter();
+        horaFormatter.dateFormat = "HH:mm'hs'";
+        
+        return horaFormatter.string(from: date);
+    }
+    
+    class func getNombreMes(nroMes: Int) -> String {
+        var mes = "";
+        switch nroMes {
+        case 1:
+            mes = "enero";
+        case 2:
+            mes = "febrero";
+        case 3:
+            mes = "marzo";
+        case 4:
+            mes = "abril";
+        case 5:
+            mes = "mayo";
+        case 6:
+            mes = "junio";
+        case 7:
+            mes = "julio";
+        case 8:
+            mes = "agosto";
+        case 9:
+            mes = "septiembre";
+        case 10:
+            mes = "octubre";
+        case 11:
+            mes = "noviembre";
+        case 12:
+            mes = "diciembre";
+        default:
+            break;
+        }
+        
+        return mes;
     }
 }

@@ -12,6 +12,7 @@ import Firebase
 
 
 class LoginViewController: UIViewController {
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     @IBOutlet var viewLoginButtons: UIView!
     
     override func viewDidLoad() {
@@ -43,6 +44,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func facebookLogin(sender: UIButton) {
+        ProgressOverlayView.shared.showProgressView(self.view)
         let fbLoginManager = FBSDKLoginManager()
         fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
             if let error = error {
@@ -61,8 +63,8 @@ class LoginViewController: UIViewController {
             FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
                 if let error = error {
                     print("Login error: \(error.localizedDescription)")
-                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    let alertController = UIAlertController(title: "Error de login", message: error.localizedDescription, preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
                     alertController.addAction(okayAction)
                     self.present(alertController, animated: true, completion: nil)
                     

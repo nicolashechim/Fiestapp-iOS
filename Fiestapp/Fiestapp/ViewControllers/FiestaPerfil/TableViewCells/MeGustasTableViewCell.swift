@@ -16,6 +16,7 @@ class MeGustasTableViewCell: UITableViewCell {
     @IBOutlet var imageViewUsuario1: UIImageView!
     @IBOutlet var imageViewUsuario2: UIImageView!
     @IBOutlet var imageViewUsuario3: UIImageView!
+    @IBOutlet var labelSinInvitados: UILabel!
     @IBOutlet var buttonQuienTeGusta: UIButton!
     @IBAction func buttonQuienTeGustaOnPress(_ sender: UIButton) {
     }

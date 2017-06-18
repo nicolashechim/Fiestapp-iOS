@@ -72,24 +72,17 @@ class BackgroundAnimationViewController: UIViewController {
 //MARK: KolodaViewDelegate
 extension BackgroundAnimationViewController: KolodaViewDelegate {
     
+    func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+        print("index: " + String(index))
+        print("dirección: " + String(describing: direction))
+        print("id invitado: " + invitados[index].Id + " - Nombre: " + invitados[index].Nombre)
+    }
+    
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
         kolodaView.resetCurrentCardIndex()
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        let alertController = UIAlertController(title: "Ver perfil", message: "De " + invitados[index].Nombre, preferredStyle: UIAlertControllerStyle.alert)
-        
-        alertController.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel) {
-            (result : UIAlertAction) -> Void in
-        })
-        
-        alertController.addAction(UIAlertAction(title: "Sí", style: UIAlertActionStyle.default)
-        {
-            (result : UIAlertAction) -> Void in
-            UIApplication.shared.openURL(URL(string: "https://www.facebook.com/" + invitados[index].Id)!)
-        })
-        
-        self.present(alertController, animated: true, completion: nil)
     }
     
     func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {
@@ -127,7 +120,7 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
         invitados[index].FotoPerfil.layer.cornerRadius = 10
         invitados[index].FotoPerfil.layer.masksToBounds = false
         invitados[index].FotoPerfil.clipsToBounds = true
-
+        
         return invitados[index].FotoPerfil
     }
     

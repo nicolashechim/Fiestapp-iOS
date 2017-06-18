@@ -82,44 +82,30 @@ class FiestaTableViewController: UITableViewController {
         return cell
     }
     
-    func initInformacionCell(cell: InformacionTableViewCell) {
-        cell.labelDia.text = receivedData.FechaHora
-        cell.labelHora.text = receivedData.FechaHora
-        cell.labelNombreLugar.text = receivedData.Ubicacion.Nombre
-        
-        Common.initMapView(mapa: cell.mapaUbicacion,
-                           latitud: Double(receivedData.Ubicacion.Latitud)!,
-                           longitud: Double(receivedData.Ubicacion.Longitud)!,
-                           zoom: 400)
-        
-        Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return cellHeight
     }
     
-    func initMeGustasCell(cell: MeGustasTableViewCell) {
-        cell.imageViewUsuario1.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
-        cell.imageViewUsuario1.layer.masksToBounds = false
-        cell.imageViewUsuario1.clipsToBounds = true
-        
-        cell.imageViewUsuario2.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
-        cell.imageViewUsuario2.layer.masksToBounds = false
-        cell.imageViewUsuario2.clipsToBounds = true
-        
-        cell.imageViewUsuario3.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
-        cell.imageViewUsuario3.layer.masksToBounds = false
-        cell.imageViewUsuario3.clipsToBounds = true
-        
-        let threeRandomUsers = receivedData.Usuarios.choose(3)
-        var urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: threeRandomUsers[0].Id, height: 200, width: 200)
-        cell.imageViewUsuario1.downloadedFrom(url: urlFotoPerfil)
-        
-        urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: threeRandomUsers[1].Id, height: 200, width: 200)
-        cell.imageViewUsuario2.downloadedFrom(url: urlFotoPerfil)
-        
-        urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: threeRandomUsers[2].Id, height: 200, width: 200)
-        cell.imageViewUsuario3.downloadedFrom(url: urlFotoPerfil)
-        
-        Common.initCardMaskCell(viewCell: cell.viewContentCell, viewMask: cell.viewCardMask)
-        
+    // MARK: - Navigation
+    // method to run when table view cell is tapped
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.row == EnumFiestasCell.Informacion.hashValue) {
+        }
+        else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1) {
+            self.performSegue(withIdentifier: "segueMeGustas", sender: self)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // This function is called before the segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueMeGustas" {
+            let backgroundAnimationViewController = segue.destination as! BackgroundAnimationViewController
+            completarDatosInvitadosFacebook()
+            backgroundAnimationViewController.setInvitados(usuarios: self.receivedData.Usuarios)
+        }
     }
     
     func initTableViewHeader() {
@@ -143,32 +129,75 @@ class FiestaTableViewController: UITableViewController {
         labelCantidadInvitados.text = String(receivedData.CantidadInvitados)
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        return cellHeight
+    func initInformacionCell(cell: InformacionTableViewCell) {
+        cell.labelDia.text = Common.getDiaMes(fecha: receivedData.FechaHora)
+        cell.labelHora.text = Common.getHora(fecha: receivedData.FechaHora)
+        cell.labelNombreLugar.text = receivedData.Ubicacion.Nombre
+        
+        Common.initMapView(mapa: cell.mapaUbicacion,
+                           latitud: Double(receivedData.Ubicacion.Latitud)!,
+                           longitud: Double(receivedData.Ubicacion.Longitud)!,
+                           zoom: 400)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapMap(_:)))
+        cell.mapaUbicacion.addGestureRecognizer(tapGesture)
+        
+        Common.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
     }
     
-    // MARK: - Navigation
-    // method to run when table view cell is tapped
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(indexPath.row == EnumFiestasCell.Informacion.hashValue) {
-            Common.goToMap(latitud: Double(receivedData.Ubicacion.Latitud)!, longitud: Double(receivedData.Ubicacion.Longitud)!, nombreDestino: receivedData.Ubicacion.Nombre)
-        }
-        else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1) {
-            self.performSegue(withIdentifier: "segueMeGustas", sender: self)
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
+    func tapMap(_ sender: UITapGestureRecognizer) {
+        let alertController = UIAlertController(title: "Abrir en mapas", message: "¿Quieres ver la ruta hacia " + self.receivedData.Ubicacion.Nombre + "?", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel) {
+            (result : UIAlertAction) -> Void in
+        })
+        
+        alertController.addAction(UIAlertAction(title: "Sí", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+            Common.goToMap(latitud: Double(self.receivedData.Ubicacion.Latitud)!, longitud: Double(self.receivedData.Ubicacion.Longitud)!, nombreDestino: self.receivedData.Ubicacion.Nombre)
+        })
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
-    // This function is called before the segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueMeGustas" {
-            let backgroundAnimationViewController = segue.destination as! BackgroundAnimationViewController
-            completarDatosInvitadosFacebook()
-            backgroundAnimationViewController.setInvitados(usuarios: self.receivedData.Usuarios)
+    func initMeGustasCell(cell: MeGustasTableViewCell) {
+        if receivedData.Usuarios.count <= 1 {
+            cell.labelSinInvitados.isHidden = false
+            cell.imageViewUsuario3.image = UIImage(named: "ic_meGustasCell.png")
         }
+        else {
+            cell.imageViewUsuario1.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
+            cell.imageViewUsuario1.layer.masksToBounds = false
+            cell.imageViewUsuario1.clipsToBounds = true
+            
+            cell.imageViewUsuario2.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
+            cell.imageViewUsuario2.layer.masksToBounds = false
+            cell.imageViewUsuario2.clipsToBounds = true
+            
+            cell.imageViewUsuario3.layer.cornerRadius = cell.imageViewUsuario1.frame.height/2
+            cell.imageViewUsuario3.layer.masksToBounds = false
+            cell.imageViewUsuario3.clipsToBounds = true
+            
+            let randomUsers = receivedData.Usuarios.choose(receivedData.Usuarios.count == 1 ? 1
+                : receivedData.Usuarios.count == 2 ? 2
+                : 3)
+            
+            for i in 0..<randomUsers.count {
+                let urlFotoPerfil = FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: randomUsers[i].Id, height: 200, width: 200)
+                if i == 0 {
+                    cell.imageViewUsuario1.downloadedFrom(url: urlFotoPerfil)
+                }
+                else if i == 1 {
+                    cell.imageViewUsuario2.downloadedFrom(url: urlFotoPerfil)
+                }
+                else if i == 2 {
+                    cell.imageViewUsuario3.downloadedFrom(url: urlFotoPerfil)
+                }
+            }
+        }
+        Common.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
     }
-   
+    
     func completarDatosInvitadosFacebook() {
         for usuario in receivedData.Usuarios {
             let urlFotoPerfil =
@@ -176,7 +205,7 @@ class FiestaTableViewController: UITableViewController {
                                                               height: 1080,
                                                               width: 1080)
             usuario.FotoPerfil.downloadedFrom(url: urlFotoPerfil)
-           
+            
             FBSDKGraphRequest(graphPath: usuario.Id, parameters: ["fields": "name, gender"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil) {
                     let fbDetails = result as! NSDictionary
