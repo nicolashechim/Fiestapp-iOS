@@ -10,18 +10,39 @@ import Firebase
 
 class MisFiestasService {
     
-    class func obtenerFiestas(viewController: MisFiestasTableViewController)  {
-        FIRDatabase.database().reference().child("fiestas").observeSingleEvent(of: .value, with: { (snapshot) in
-            if snapshot.exists() {
-                var fiestas = [FiestaModel]()
-                for child in snapshot.children.allObjects {
-                    fiestas.append(FiestaModel(snapshot: child as! FIRDataSnapshot))
+    class func obtenerFiestas(viewController: MisFiestasTableViewController) {
+        let userId = FIRAuth.auth()?.currentUser?.uid
+        var fiestas = [FiestaModel]()
+        
+        // Se obtienen los ids de las fiestas que tienen al usuario logueado como invitado
+        FIRDatabase.database().reference().child("usuarios")
+            .child(userId!)
+            .child("fiestas")
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+                if snapshot.exists() {
+                    for child in snapshot.children.allObjects as? [FIRDataSnapshot] ?? [] {
+                        
+                        // Por cada id de fiesta se obtienen los datos de cada una
+                        FIRDatabase.database().reference().child("fiestas")
+                            .queryOrdered(byChild: "key")
+                            .queryEqual(toValue: child.key)
+                            .observeSingleEvent(of: .value, with: { (snapshot) in
+                                if snapshot.exists() {
+                                    for child in snapshot.children.allObjects {
+                                        fiestas.append(FiestaModel(snapshot: child as! FIRDataSnapshot))
+                                    }
+                                    
+                                    // Se actualiza el viewController con cada fiesta obtenida
+                                    viewController.mostrarFiestas(fiestas: fiestas)
+                                }
+                            }) { (error) in
+                                print(error.localizedDescription)
+                                viewController.mostrarError()
+                        }
+                    }
                 }
-                viewController.mostrarFiestas(fiestas: fiestas)
-            }
-        }) { (error) in
-            print(error.localizedDescription)
-            viewController.mostrarError()
+            }) { (error) in
+                print(error.localizedDescription)
         }
     }
 }
