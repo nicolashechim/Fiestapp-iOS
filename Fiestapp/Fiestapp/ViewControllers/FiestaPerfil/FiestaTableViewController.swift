@@ -93,7 +93,8 @@ class FiestaTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.row == EnumFiestasCell.Informacion.hashValue) {
         }
-        else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1) {
+        else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1
+            && receivedData.Usuarios.count > 1 ) {
             self.performSegue(withIdentifier: "segueMeGustas", sender: self)
         }
         tableView.deselectRow(at: indexPath, animated: true)

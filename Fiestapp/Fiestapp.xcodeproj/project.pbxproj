@@ -59,7 +59,6 @@
 		932AF1B91EE8A81500BB0D1F /* iconTab1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF1991EE8A81500BB0D1F /* iconTab1@2x.png */; };
 		932AF1BA1EE8A81500BB0D1F /* iconTab1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF19A1EE8A81500BB0D1F /* iconTab1@3x.png */; };
 		932AF1BB1EE8A81500BB0D1F /* Bg_profile_fiesta.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF19D1EE8A81500BB0D1F /* Bg_profile_fiesta.png */; };
-		932AF1BC1EE8A81500BB0D1F /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF19E1EE8A81500BB0D1F /* Profile.png */; };
 		932AF1BD1EE8A81500BB0D1F /* bonete.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF1A01EE8A81500BB0D1F /* bonete.png */; };
 		932AF1BE1EE8A81500BB0D1F /* Branding.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF1A11EE8A81500BB0D1F /* Branding.png */; };
 		932AF1BF1EE8A81500BB0D1F /* Branding@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 932AF1A21EE8A81500BB0D1F /* Branding@2x.png */; };
@@ -147,7 +146,6 @@
 		932AF1991EE8A81500BB0D1F /* iconTab1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@2x.png"; sourceTree = "<group>"; };
 		932AF19A1EE8A81500BB0D1F /* iconTab1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconTab1@3x.png"; sourceTree = "<group>"; };
 		932AF19D1EE8A81500BB0D1F /* Bg_profile_fiesta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bg_profile_fiesta.png; sourceTree = "<group>"; };
-		932AF19E1EE8A81500BB0D1F /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Profile.png; sourceTree = "<group>"; };
 		932AF1A01EE8A81500BB0D1F /* bonete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonete.png; sourceTree = "<group>"; };
 		932AF1A11EE8A81500BB0D1F /* Branding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Branding.png; sourceTree = "<group>"; };
 		932AF1A21EE8A81500BB0D1F /* Branding@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Branding@2x.png"; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 			isa = PBXGroup;
 			children = (
 				932AF19D1EE8A81500BB0D1F /* Bg_profile_fiesta.png */,
-				932AF19E1EE8A81500BB0D1F /* Profile.png */,
 			);
 			path = FiestaPerfil;
 			sourceTree = "<group>";
@@ -605,7 +602,6 @@
 				932AF1AC1EE8A81500BB0D1F /* Ubuntu-LI.ttf in Resources */,
 				932AF1B71EE8A81500BB0D1F /* IconLogout@2x.png in Resources */,
 				932AF1B91EE8A81500BB0D1F /* iconTab1@2x.png in Resources */,
-				932AF1BC1EE8A81500BB0D1F /* Profile.png in Resources */,
 				931C5AD31EEDE16D00BD0C0C /* SwipeCardLike.png in Resources */,
 				932AF1AB1EE8A81500BB0D1F /* Ubuntu-L.ttf in Resources */,
 				931C5AD91EEDE51000BD0C0C /* SwipeCardNope.png in Resources */,
@@ -833,6 +829,7 @@
 			baseConfigurationReference = 4B9BCFC6672A8773A1FC2AF2 /* Pods-fiestapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				DEVELOPMENT_TEAM = L98G23Y6A4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -858,6 +855,7 @@
 			baseConfigurationReference = 9FC4EC719A4FA3C4D99471F4 /* Pods-fiestapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = "";
 				DEVELOPMENT_TEAM = L98G23Y6A4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

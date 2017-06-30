@@ -27,7 +27,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Vz3-o5-tV3" userLabel="Mis fiestas Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mis fiestas" image="iconTab1.png" id="hC3-ks-dJf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac6-RF-Z3C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ac6-RF-Z3C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -48,7 +48,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="wYh-2Q-ohx" userLabel="Notificaciones Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notificaciones" image="ic_action_notifications.png" id="2BN-cF-51B"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2r-T7-ggx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2r-T7-ggx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -510,7 +510,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Kgr-hF-gib" userLabel="Nueva Fiesta Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nueva fiesta" image="ic_action_add_circle.png" id="bQG-Kh-nMP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYJ-nD-s36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xYJ-nD-s36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -663,7 +663,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-Sn-Ks2" userLabel="Button - Nope">
-                                <rect key="frame" x="100" y="460" width="60" height="60"/>
+                                <rect key="frame" x="100" y="455" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="ic_nope.png">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -673,7 +673,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-kP-FXX" userLabel="Button - Like">
-                                <rect key="frame" x="230" y="460" width="60" height="60"/>
+                                <rect key="frame" x="206" y="455" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="ic_like.png">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -682,8 +682,8 @@
                                     <action selector="rightButtonTapped" destination="tK8-gq-nGQ" eventType="touchUpInside" id="Wfp-YH-FiI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-4T-hJ4" userLabel="Button - Reset">
-                                <rect key="frame" x="165" y="460" width="60" height="60"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-4T-hJ4" userLabel="Button - Reset">
+                                <rect key="frame" x="158" y="460" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="ic_undo.png">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
