@@ -29,9 +29,9 @@ open class ProgressOverlayView {
         progressView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
         progressView.center = CGPoint(x: view.frame.width / 2,
                                       y: view.frame.height / 2)
-        progressView.backgroundColor = UIColor(hex: 0x444444, alpha: 0.7)
+        progressView.backgroundColor = UIColor(hex: 0x000000, alpha: 0.8)
         progressView.clipsToBounds = true
-        progressView.layer.cornerRadius = progressView.frame.height / 2
+        progressView.layer.cornerRadius = 8
         
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         activityIndicator.activityIndicatorViewStyle = .whiteLarge
