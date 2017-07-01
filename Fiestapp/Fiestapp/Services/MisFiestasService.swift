@@ -11,13 +11,12 @@ import Firebase
 class MisFiestasService {
     
     class func obtenerFiestas(viewController: MisFiestasTableViewController) {
-        let userId = FIRAuth.auth()?.currentUser?.uid
         var fiestas = [FiestaModel]()
         
         // Se obtienen los ids de las fiestas que tienen al usuario logueado como invitado
         FIRDatabase.database().reference().child("usuarios")
-            .child(userId!)
-            .child("fiestas")
+            .child(FirebaseService.shared.userIdFacebook!)
+            .child("Fiestas")
             .observeSingleEvent(of: .value, with: { (snapshot) in
                 if snapshot.exists() {
                     for child in snapshot.children.allObjects as? [FIRDataSnapshot] ?? [] {

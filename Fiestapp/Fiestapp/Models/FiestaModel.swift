@@ -98,7 +98,7 @@ class FiestaModel : NSObject {
                     
                 case "Usuarios":
                     while let childOfChildSnapshot = childOfChild.nextObject() as? FIRDataSnapshot {
-                        let idUsuario = childOfChildSnapshot.value as! String
+                        let idUsuario = childOfChildSnapshot.key
                         let invitado = UsuarioModel()
                         invitado.Id = idUsuario
                         self.Usuarios.append(invitado)

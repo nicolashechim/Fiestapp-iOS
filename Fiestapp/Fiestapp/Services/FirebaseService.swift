@@ -13,6 +13,7 @@ class FirebaseService {
     static let shared = FirebaseService ()
     
     public static let ref = FIRDatabase.database().reference()
-    let userID = FIRAuth.auth()?.currentUser?.uid
+    let userIDFirebase = FIRAuth.auth()?.currentUser?.uid
+    let userIdFacebook = FIRAuth.auth()?.currentUser?.providerData[0].uid
     
 }

@@ -22,8 +22,6 @@ class BackgroundAnimationViewController: UIViewController {
     @IBOutlet weak var kolodaView: CustomKolodaView!
     @IBOutlet var viewHeader: UIView!
     
-    var myGroup = DispatchGroup()
-    
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +81,26 @@ extension BackgroundAnimationViewController: KolodaViewDelegate {
     }
     
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        let fotoPerfilInvitadoMatch = UIImageView(frame: CGRect(x: 10, y: 70, width: 250, height: 172))
+        fotoPerfilInvitadoMatch.image = invitados[index].FotoPerfil.image
+        fotoPerfilInvitadoMatch.contentMode = .scaleAspectFit
+        
+        let spacer = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+        
+        let alertController = UIAlertController(title: "¡Tienes un match!", message: invitados[index].Nombre + spacer, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ver perfil", style: UIAlertActionStyle.default)
+        {
+            (result : UIAlertAction) -> Void in
+            UIApplication.shared.openURL(URL(string: "https://www.facebook.com/" + invitados[index].Id)!)
+        })
+        
+        alertController.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.cancel) {
+            (result : UIAlertAction) -> Void in
+        })
+
+        alertController.view.addSubview(fotoPerfilInvitadoMatch)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func kolodaShouldApplyAppearAnimation(_ koloda: KolodaView) -> Bool {

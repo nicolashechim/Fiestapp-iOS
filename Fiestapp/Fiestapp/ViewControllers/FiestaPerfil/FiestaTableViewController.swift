@@ -33,6 +33,8 @@ class FiestaTableViewController: UITableViewController {
     }
     
     var receivedData = FiestaModel()
+    var invitadosMeGustas = [UsuarioModel]()
+    var fiestaService = FiestaService()
     let cellHeight: CGFloat = 170
     let cellIdentifier = "InformacionCell"
     
@@ -45,6 +47,12 @@ class FiestaTableViewController: UITableViewController {
         
         Common.applyGradientView(view: viewHeader)
         initTableViewHeader()
+        invitadosMeGustas = receivedData.Usuarios
+        
+        //Se excluye el usuario logueado de la lista de invitados para "Me gustás"
+        if let index = invitadosMeGustas.index(where: { $0.Id == FirebaseService.shared.userIdFacebook }) {
+            invitadosMeGustas.remove(at: index)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,9 +111,9 @@ class FiestaTableViewController: UITableViewController {
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueMeGustas" {
+            prepararInvitadosMeGustas(idFiesta: receivedData.key)
             let backgroundAnimationViewController = segue.destination as! BackgroundAnimationViewController
-            completarDatosInvitadosFacebook()
-            backgroundAnimationViewController.setInvitados(usuarios: self.receivedData.Usuarios)
+            backgroundAnimationViewController.setInvitados(usuarios: self.invitadosMeGustas)
         }
     }
     
@@ -162,7 +170,7 @@ class FiestaTableViewController: UITableViewController {
     }
     
     func initMeGustasCell(cell: MeGustasTableViewCell) {
-        if receivedData.Usuarios.count <= 1 {
+        if invitadosMeGustas.count == 0 {
             cell.labelSinInvitados.isHidden = false
             cell.imageViewUsuario3.image = UIImage(named: "ic_meGustasCell.png")
         }
@@ -179,8 +187,8 @@ class FiestaTableViewController: UITableViewController {
             cell.imageViewUsuario3.layer.masksToBounds = false
             cell.imageViewUsuario3.clipsToBounds = true
             
-            let randomUsers = receivedData.Usuarios.choose(receivedData.Usuarios.count == 1 ? 1
-                : receivedData.Usuarios.count == 2 ? 2
+            let randomUsers = invitadosMeGustas.choose(invitadosMeGustas.count == 1 ? 1
+                : invitadosMeGustas.count == 2 ? 2
                 : 3)
             
             for i in 0..<randomUsers.count {
@@ -199,15 +207,27 @@ class FiestaTableViewController: UITableViewController {
         Common.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
     }
     
+    func prepararInvitadosMeGustas(idFiesta: String) {
+        FiestaService.FiltrarInvitadosMeGustas(idFiesta: idFiesta) { success in
+            for idUsuarioAFiltrar in success {
+                if let index = self.invitadosMeGustas.index(where: { $0.Id == idUsuarioAFiltrar }) {
+                    self.invitadosMeGustas.remove(at: index)
+                }
+            }
+            self.completarDatosInvitadosFacebook()
+        }
+    }
+    
     func completarDatosInvitadosFacebook() {
-        for usuario in receivedData.Usuarios {
+        for usuario in invitadosMeGustas {
             let urlFotoPerfil =
                 FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: usuario.Id,
                                                               height: 1080,
                                                               width: 1080)
             usuario.FotoPerfil.downloadedFrom(url: urlFotoPerfil)
             
-            FBSDKGraphRequest(graphPath: usuario.Id, parameters: ["fields": "name, gender"]).start(completionHandler: { (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: usuario.Id, parameters: ["fields": "name, gender"])
+                .start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil) {
                     let fbDetails = result as! NSDictionary
                     
