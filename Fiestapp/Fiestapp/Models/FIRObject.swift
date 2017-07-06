@@ -29,11 +29,7 @@ class FIRObject : NSObject {
                     if child.key != "Funcionalidades" {
                         let newobj = child.children
                         while let rest1 = newobj.nextObject() as? FIRDataSnapshot {
-                            print(child.key + "["+rest1.key+"]")
                             setValue(rest1.value ?? nil, forKey: child.key + "["+rest1.key+"]")
-                            print(rest1.key)
-                            print(rest1.value ?? "nil")
-                    
                     }
                 }
             }

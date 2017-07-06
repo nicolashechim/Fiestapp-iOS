@@ -20,6 +20,7 @@ class FiestaModel : NSObject {
     var Imagen: String  = ""
     var key: String = ""
     var Nombre: String = ""
+    var Tipo: String = ""
     var Ubicacion = UbicacionModel()
     var Usuarios = [UsuarioModel]()
     
@@ -33,6 +34,7 @@ class FiestaModel : NSObject {
         self.Imagen = ""
         self.key = ""
         self.Nombre = ""
+        self.Tipo = ""
         self.Ubicacion = UbicacionModel()
         self.Usuarios = [UsuarioModel]()
     }
@@ -110,6 +112,6 @@ class FiestaModel : NSObject {
                 }
             }
         }
-        self.CantidadDias = Common.countDaysTo(fecha: self.FechaHora);
+        self.CantidadDias = Common.shared.countDaysTo(fecha: self.FechaHora);
     }
 }

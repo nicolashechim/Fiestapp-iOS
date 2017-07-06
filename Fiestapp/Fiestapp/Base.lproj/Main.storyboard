@@ -27,7 +27,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Vz3-o5-tV3" userLabel="Mis fiestas Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mis fiestas" image="iconTab1.png" id="hC3-ks-dJf"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ac6-RF-Z3C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac6-RF-Z3C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -41,19 +41,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hrF-kO-sEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2263" y="-943"/>
+            <point key="canvasLocation" x="-2263" y="-968"/>
         </scene>
         <!--Notificaciones Navigation Controller-->
         <scene sceneID="TIG-Gc-pxs">
             <objects>
                 <navigationController navigationBarHidden="YES" id="wYh-2Q-ohx" userLabel="Notificaciones Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notificaciones" image="ic_action_notifications.png" id="2BN-cF-51B"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="x2r-T7-ggx">
+                    <tabBarItem key="tabBarItem" title="Cerrar sesión" image="IconLogout.png" id="2BN-cF-51B"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="x2r-T7-ggx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ove-ZO-iPr"/>
+                        <segue destination="csu-xa-BPv" kind="relationship" relationship="rootViewController" id="vJM-2Y-a45"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZu-8j-5cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -84,20 +84,12 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZC-Ls-Pod">
-                                        <rect key="frame" x="327" y="22" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="IconLogout.png"/>
-                                        <connections>
-                                            <action selector="logout:" destination="csu-xa-BPv" eventType="touchUpInside" id="90c-oX-IVt"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.41960784313725491" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2U-9l-1O0" userLabel="View - Container Table View">
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <segue destination="uJC-3L-1Jt" kind="embed" id="dws-D7-HSI"/>
                                 </connections>
@@ -107,7 +99,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="eir-Lx-3hG"/>
                     <connections>
-                        <outlet property="buttonLogout" destination="RZC-Ls-Pod" id="4S4-dR-cOC"/>
                         <outlet property="viewHeader" destination="sUZ-Hb-cvc" id="GtF-PJ-2Re"/>
                     </connections>
                 </viewController>
@@ -124,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="14" indentationWidth="0.0" reuseIdentifier="FiestaCell" rowHeight="84" id="VmV-Au-SW2" userLabel="FiestaCell" customClass="FiestaTableViewCell" customModule="fiestapp">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="14" indentationWidth="0.0" reuseIdentifier="FiestaCell" rowHeight="84" id="VmV-Au-SW2" userLabel="FiestaCell" customClass="FiestaTableViewCell" customModule="fiestapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VmV-Au-SW2" id="GpN-Fm-DTI">
@@ -158,7 +149,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cardMask" destination="HkN-Nh-srs" id="ozE-DH-FoM"/>
-                                    <outlet property="contentView" destination="GpN-Fm-DTI" id="CP2-q8-c07"/>
                                     <outlet property="contentViewCell" destination="GpN-Fm-DTI" id="gUT-JI-1Az"/>
                                     <outlet property="details" destination="M1l-Re-hHY" id="Hsp-Ce-h7J"/>
                                     <outlet property="iconCircle" destination="8f0-GA-c3w" id="u0K-xK-uIt"/>
@@ -243,8 +233,8 @@
                                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjO-6o-7ta" userLabel="Label - CantFotos">
-                                            <rect key="frame" x="146" y="85" width="80" height="31"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjO-6o-7ta" userLabel="Label - Tipo">
+                                            <rect key="frame" x="116" y="85" width="141" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
                                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -264,8 +254,8 @@
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOTOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOd-BY-4OO" userLabel="Label - Fotos">
-                                            <rect key="frame" x="157" y="117" width="59" height="11.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIPO DE FIESTA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOd-BY-4OO" userLabel="Label - TipoFiesta">
+                                            <rect key="frame" x="131" y="117" width="114" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="11"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -365,7 +355,7 @@
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-P6-Ew5" userLabel="Image - Usuario1">
                                             <rect key="frame" x="31" y="17" width="86" height="86"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-kY-lcT" userLabel="Image - Usuario2">
                                             <rect key="frame" x="143" y="17" width="86" height="86"/>
@@ -373,7 +363,7 @@
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="500-RX-1nZ" userLabel="Image - Usuario3">
                                             <rect key="frame" x="255" y="17" width="86" height="86"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                         </imageView>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aún no se han añadido invitados a la fiesta" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqy-76-Yep">
                                             <rect key="frame" x="31" y="40" width="198" height="40"/>
@@ -412,16 +402,15 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="back" destination="708-XE-qyb" id="DdU-Be-dBF"/>
                         <outlet property="imageProfile" destination="QoD-hR-J25" id="FTj-bz-GJu"/>
                         <outlet property="imageProfileContainer" destination="JxM-BQ-WSi" id="vo5-uH-wvT"/>
                         <outlet property="labelCantidadDias" destination="gRe-Cg-2E8" id="3Jx-SW-wdD"/>
-                        <outlet property="labelCantidadFotos" destination="YjO-6o-7ta" id="ep1-LW-tBk"/>
                         <outlet property="labelCantidadInvitados" destination="KLv-lY-a3B" id="5Ve-wV-jN9"/>
                         <outlet property="labelDetails" destination="Zbf-kY-EAd" id="pwB-KY-h95"/>
                         <outlet property="labelDias" destination="qEr-gp-ekw" id="pQt-rs-VTe"/>
-                        <outlet property="labelFotos" destination="eOd-BY-4OO" id="SBa-FF-cGF"/>
                         <outlet property="labelInvitados" destination="15r-Nm-6Qa" id="3jM-A7-NoL"/>
+                        <outlet property="labelTipo" destination="YjO-6o-7ta" id="g10-Si-ZcW"/>
+                        <outlet property="labelTipoFiesta" destination="eOd-BY-4OO" id="olR-mw-7hF"/>
                         <outlet property="labelTitle" destination="gHt-FL-laH" id="dTY-Cb-GuG"/>
                         <outlet property="viewHeader" destination="cgN-mM-CJS" id="np6-kV-HyK"/>
                         <segue destination="tK8-gq-nGQ" kind="show" identifier="segueMeGustas" id="w4m-YJ-7Td"/>
@@ -489,7 +478,7 @@
         <!--Home Tab Bar Controller-->
         <scene sceneID="kDJ-na-4e4">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabBarController" id="ycl-Z4-bQH" userLabel="Home Tab Bar Controller" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarController" id="ycl-Z4-bQH" userLabel="Home Tab Bar Controller" customClass="HomeViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uGS-ba-hur">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -510,7 +499,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="Kgr-hF-gib" userLabel="Nueva Fiesta Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Nueva fiesta" image="ic_action_add_circle.png" id="bQG-Kh-nMP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xYJ-nD-s36">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xYJ-nD-s36">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -534,20 +523,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CREAR FIESTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBS-sO-mVI">
-                                <rect key="frame" x="129" y="319" width="117" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IMPORTAR FIESTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8f-LW-GGc">
-                                <rect key="frame" x="113" y="382" width="149" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3up-9d-CLO" userLabel="View - Header">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -563,11 +538,53 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.41960784309999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iv5-Wk-ftF" userLabel="View - Content">
+                                <rect key="frame" x="0.0" y="70" width="375" height="548"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wae-Cq-Z0E" userLabel="View - CardMask">
+                                        <rect key="frame" x="10" y="10" width="355" height="528"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingresá el código de la fiesta a la que querés unirte:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBS-sO-mVI">
+                                                <rect key="frame" x="63" y="178" width="228" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Código" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mpV-GD-Yom">
+                                                <rect key="frame" x="63" y="249" width="228" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="light"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6c-xf-ZOJ">
+                                                <rect key="frame" x="102" y="308" width="150" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="17"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="AÑADIR FIESTA"/>
+                                                <connections>
+                                                    <action selector="buttonSubmit:" destination="Tj7-Rx-aas" eventType="touchUpInside" id="O3g-1k-mXz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Iaz-zr-tlF"/>
                     <connections>
+                        <outlet property="inputCodigo" destination="mpV-GD-Yom" id="LMp-zH-EIO"/>
+                        <outlet property="viewCardMask" destination="wae-Cq-Z0E" id="AmP-5X-0dn"/>
+                        <outlet property="viewContent" destination="Iv5-Wk-ftF" id="yMQ-Hk-Mcr"/>
                         <outlet property="viewHeader" destination="3up-9d-CLO" id="y7F-ft-8JE"/>
                     </connections>
                 </viewController>
@@ -663,7 +680,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdl-Sn-Ks2" userLabel="Button - Nope">
-                                <rect key="frame" x="100" y="455" width="70" height="70"/>
+                                <rect key="frame" x="80" y="455" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="ic_nope.png">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -673,8 +690,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq3-kP-FXX" userLabel="Button - Like">
-                                <rect key="frame" x="206" y="455" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="153" y="455" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="ic_like.png">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -682,8 +699,18 @@
                                     <action selector="rightButtonTapped" destination="tK8-gq-nGQ" eventType="touchUpInside" id="Wfp-YH-FiI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ha5-Yq-wbg" userLabel="Button - Matches">
+                                <rect key="frame" x="224" y="455" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ic_matches.png">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="matchesButtonTapped:" destination="tK8-gq-nGQ" eventType="touchUpInside" id="bkO-yZ-W4V"/>
+                                </connections>
+                            </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-4T-hJ4" userLabel="Button - Reset">
-                                <rect key="frame" x="158" y="460" width="60" height="60"/>
+                                <rect key="frame" x="315" y="460" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="ic_undo.png">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -698,11 +725,205 @@
                     <connections>
                         <outlet property="kolodaView" destination="cDE-12-0Y4" id="Kqe-Qa-qgO"/>
                         <outlet property="viewHeader" destination="ebY-ed-5Gb" id="Z51-mW-FdI"/>
+                        <segue destination="D7I-bz-1Zn" kind="show" identifier="segueMeGustasSinResultados" id="lob-eK-k0r"/>
+                        <segue destination="imy-OP-qqA" kind="show" identifier="segueMatches" id="MdU-T7-ZQ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsc-gM-JG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.5999999999999" y="-943.6281859070466"/>
+            <point key="canvasLocation" x="1654" y="-944"/>
+        </scene>
+        <!--Me Gustas Mensajes Sin Resultados-->
+        <scene sceneID="Ucf-EI-0CN">
+            <objects>
+                <viewController id="D7I-bz-1Zn" userLabel="Me Gustas Mensajes Sin Resultados" customClass="MeGustasSinResultadosViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HBN-Gk-5Mu"/>
+                        <viewControllerLayoutGuide type="bottom" id="8XR-qI-hLN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="63T-Ek-7zV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-bP-grI" userLabel="View - Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAa-nh-xiN" userLabel="Button - Back">
+                                        <rect key="frame" x="5" y="23" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="IconBack.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="D7I-bz-1Zn" eventType="touchUpInside" id="6hN-Om-aWQ"/>
+                                            <action selector="goBack:" destination="tK8-gq-nGQ" eventType="touchUpInside" id="bed-uQ-gr4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Quién te gusta?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-gO-HnK" userLabel="Label - Title">
+                                        <rect key="frame" x="115" y="32" width="144" height="19.5"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¡Has evaluado a todos los invitados de esta fiesta!         Mira tus coincidencias" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-2c-rZ4" userLabel="Label">
+                                <rect key="frame" x="6" y="283" width="235" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="18"/>
+                                <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_meGustasCell.png" translatesAutoresizingMaskIntoConstraints="NO" id="W3u-cj-C0X" userLabel="Image - MeGustas">
+                                <rect key="frame" x="250" y="283" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQS-qP-ngR" userLabel="Button - Matches">
+                                <rect key="frame" x="152" y="458" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="ic_matches.png">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonMisMatches:" destination="D7I-bz-1Zn" eventType="touchUpInside" id="T5r-S9-bum"/>
+                                    <action selector="matchesButtonTapped:" destination="tK8-gq-nGQ" eventType="touchUpInside" id="uoR-SS-dAS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelMensaje" destination="dfs-2c-rZ4" id="wCA-5p-eku"/>
+                        <outlet property="labelTitulo" destination="Rbr-gO-HnK" id="X2c-ib-auL"/>
+                        <outlet property="viewHeader" destination="wa9-bP-grI" id="ZVd-Gw-EE3"/>
+                        <segue destination="imy-OP-qqA" kind="show" identifier="segueMatches" id="JT1-Ua-1MC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bxQ-KE-rXN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602" y="-945"/>
+        </scene>
+        <!--Matches-->
+        <scene sceneID="gOU-Jh-CQ0">
+            <objects>
+                <viewController id="imy-OP-qqA" userLabel="Matches" customClass="MatchesViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XXM-Lo-VDY"/>
+                        <viewControllerLayoutGuide type="bottom" id="k9i-4r-Zud"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iAa-E3-3vb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-tF-9Ic" userLabel="View - Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uR-Zw-nqK" userLabel="Button - Back">
+                                        <rect key="frame" x="5" y="23" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="IconBack.png">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="imy-OP-qqA" eventType="touchUpInside" id="bzt-pz-3h5"/>
+                                            <action selector="goBack:" destination="tK8-gq-nGQ" eventType="touchUpInside" id="cBJ-My-jtc"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mis matches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFP-0G-bhB" userLabel="Label - Title">
+                                        <rect key="frame" x="115" y="32" width="144" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWg-iS-Qlk" userLabel="View - Container Table View">
+                                <rect key="frame" x="0.0" y="70" width="375" height="478"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="Rj4-hJ-Sdm" kind="embed" identifier="" id="MCl-kB-s3i"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewHeader" destination="zHh-tF-9Ic" id="Vsv-Kx-VwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIb-j8-ZPw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="-180"/>
+        </scene>
+        <!--Matches Table View Controller-->
+        <scene sceneID="rU4-3d-I9Z">
+            <objects>
+                <tableViewController id="Rj4-hJ-Sdm" customClass="MatchesTableViewController" customModule="fiestapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lPi-sp-xK4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="478"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="14" indentationWidth="0.0" reuseIdentifier="MatchCell" rowHeight="84" id="uDK-hB-PDx" userLabel="MatchCell" customClass="MatchTableViewCell" customModule="fiestapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uDK-hB-PDx" id="Pdm-eq-bfq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NqH-9B-HcS" userLabel="View - Card Mask">
+                                            <rect key="frame" x="17" y="10" width="341" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqt-PU-ZJ1" userLabel="Image View - Perfil Invitado">
+                                            <rect key="frame" x="26" y="19" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Toca aquí para contactar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoi-Rv-OUa" userLabel="Label - Details">
+                                            <rect key="frame" x="100" y="43" width="240" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                            <fontDescription key="fontDescription" name="Ubuntu" family="Ubuntu" pointSize="12"/>
+                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoY-Zf-hJ5" userLabel="Label - Nombre Invitado">
+                                            <rect key="frame" x="100" y="26" width="240" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
+                                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cardMask" destination="NqH-9B-HcS" id="Y1a-cP-la5"/>
+                                    <outlet property="contentViewCell" destination="Pdm-eq-bfq" id="WAi-dz-bWX"/>
+                                    <outlet property="details" destination="qoi-Rv-OUa" id="c0M-Jl-nfl"/>
+                                    <outlet property="iconCircle" destination="Gqt-PU-ZJ1" id="Cta-ns-hhE"/>
+                                    <outlet property="name" destination="UoY-Zf-hJ5" id="9J2-ZG-2gN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rj4-hJ-Sdm" id="ZBw-CJ-CyR"/>
+                            <outlet property="delegate" destination="Rj4-hJ-Sdm" id="NC8-oK-IMk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Kbr-g3-JVF"/>
+                    <connections>
+                        <segue destination="D7I-bz-1Zn" kind="show" identifier="segueSinMatches" id="p9Q-xs-yno"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c52-w8-TDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2601" y="-181"/>
         </scene>
     </scenes>
     <resources>
@@ -713,10 +934,16 @@
         <image name="bonete.png" width="827" height="1240"/>
         <image name="btn_facebook.png" width="344" height="48"/>
         <image name="ic_action_add_circle.png" width="24" height="24"/>
-        <image name="ic_action_notifications.png" width="24" height="24"/>
         <image name="ic_like.png" width="54" height="54"/>
+        <image name="ic_matches.png" width="54" height="54"/>
+        <image name="ic_meGustasCell.png" width="512" height="480"/>
         <image name="ic_nope.png" width="54" height="54"/>
         <image name="ic_undo.png" width="44" height="44"/>
         <image name="iconTab1.png" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="YjT-o5-nUa"/>
+        <segue reference="lob-eK-k0r"/>
+        <segue reference="MdU-T7-ZQ0"/>
+    </inferredMetricsTieBreakers>
 </document>

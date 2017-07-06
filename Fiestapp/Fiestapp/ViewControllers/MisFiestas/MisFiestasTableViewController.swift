@@ -10,30 +10,23 @@ import UIKit
 
 class MisFiestasTableViewController: UITableViewController {
     
-    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     var fiestas = [FiestaModel]()
-    let misFiestasService = MisFiestasService()
     let cellHeight: CGFloat = 84
     let cellIdentifier = "FiestaCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ProgressOverlayView.shared.showProgressView(view)
-        MisFiestasService.obtenerFiestas(viewController: self)
+        FiestaService.shared.obtenerFiestas() { fiestas in
+            self.fiestas = fiestas
+            self.tableView.reloadData()
+            ProgressOverlayView.shared.hideProgressView()
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func mostrarFiestas(fiestas : Array<FiestaModel>){
-        self.fiestas = fiestas
-        ProgressOverlayView.shared.hideProgressView()
-        
-        self.tableView.reloadData()
-    }
-    
-    func mostrarError() {}
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,14 +71,14 @@ class MisFiestasTableViewController: UITableViewController {
     
     func initPrototypeCell(cell: FiestaTableViewCell, fiesta: FiestaModel) {
         if let fiestaImageUrl = URL(string: fiesta.Imagen) {
-            Common.downloadImage(url: fiestaImageUrl, imageView: cell.iconCircle)
+            Common.shared.downloadImage(url: fiestaImageUrl, imageView: cell.iconCircle)
         }
         
         cell.iconCircle.layer.cornerRadius = cell.iconCircle.frame.height/2
         cell.iconCircle.layer.masksToBounds = false
         cell.iconCircle.clipsToBounds = true
         cell.title.text = fiesta.Nombre
-        cell.details.text = Common.getFechaHoraString(fecha: fiesta.FechaHora)
+        cell.details.text = Common.shared.getFechaHoraString(fecha: fiesta.FechaHora)
         cell.cardMask.layer.cornerRadius = 4
         cell.contentViewCell.backgroundColor = UIColor(red: 245/255,
                                                        green: 245/255,

@@ -20,7 +20,7 @@ class NotificacionesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Common.applyGradientView(view: viewHeader)
+        Common.shared.applyGradientView(view: viewHeader)
     }
     
     override func didReceiveMemoryWarning() {

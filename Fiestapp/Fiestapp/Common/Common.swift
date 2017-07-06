@@ -11,7 +11,9 @@ import MapKit
 
 class Common {
     
-    class func initMapView(mapa: MKMapView, latitud: Double, longitud: Double, zoom: Double) {
+    static let shared = Common()
+    
+    func initMapView(mapa: MKMapView, latitud: Double, longitud: Double, zoom: Double) {
         let location = CLLocation(latitude: latitud, longitude: longitud)
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, zoom, zoom)
         let annotation = MKPointAnnotation()
@@ -21,20 +23,20 @@ class Common {
         mapa.addAnnotation(annotation)
     }
     
-    class func applyGradientView(view: UIView) {
+    func applyGradientView(view: UIView) {
         view.applyGradient(colours: [UIColor(red: 0/255, green: 177/255, blue: 255/255, alpha: 1),
                                      UIColor(red: 232/255, green: 0/255, blue: 166/255, alpha: 1)],
                            locations: [0.0, 1.0])
     }
     
-    class func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             completion(data, response, error)
             }.resume()
     }
     
-    class func downloadImage(url: URL, imageView: UIImageView) {
+    func downloadImage(url: URL, imageView: UIImageView) {
         getDataFromUrl(url: url) { (data, response, error)  in
             guard let data = data, error == nil else { return }
             DispatchQueue.main.async() { () -> Void in
@@ -43,7 +45,7 @@ class Common {
         }
     }
     
-    class func initCardMaskCell(viewContent: UIView, viewMask: UIView) {
+    func initCardMaskCell(viewContent: UIView, viewMask: UIView) {
         viewMask.layer.cornerRadius = 4
         viewContent.backgroundColor = UIColor(red: 245/255,
                                            green: 245/255,
@@ -55,7 +57,7 @@ class Common {
         viewMask.layer.shadowOffset = CGSize(width: 0, height: 0)
     }
     
-    class func goToMap(latitud: Double, longitud: Double, nombreDestino: String) {
+    func goToMap(latitud: Double, longitud: Double, nombreDestino: String) {
         let coordinates = CLLocationCoordinate2DMake(latitud, longitud)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinates, addressDictionary:nil))
         
@@ -63,11 +65,11 @@ class Common {
         mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
     }
     
-    class func getFechaHoraDate(fecha: String) -> Date {
+    func getFechaHoraDate(fecha: String) -> Date {
         return Date(timeIntervalSince1970: (Double(fecha)! / 1000.0))
     }
     
-    class func getFechaHoraString(fecha: String) -> String {
+    func getFechaHoraString(fecha: String) -> String {
         let date = getFechaHoraDate(fecha: fecha)
         let dateFormatter = DateFormatter();
         dateFormatter.dateFormat = "dd/MM/yyyy | HH:mm'hs'";
@@ -75,7 +77,7 @@ class Common {
         return dateFormatter.string(from: date);
     }
     
-    class func getDiaMes(fecha: String) -> String {
+    func getDiaMes(fecha: String) -> String {
         let date = getFechaHoraDate(fecha: fecha)
         let diaFormatter = DateFormatter();
         let mesFormatter = DateFormatter();
@@ -85,7 +87,7 @@ class Common {
         return diaFormatter.string(from: date) + " de " + getNombreMes(nroMes: Int(mesFormatter.string(from: date))!);
     }
     
-    class func getHora(fecha: String) -> String {
+    func getHora(fecha: String) -> String {
         let date = getFechaHoraDate(fecha: fecha)
         let horaFormatter = DateFormatter();
         horaFormatter.dateFormat = "HH:mm'hs'";
@@ -93,7 +95,7 @@ class Common {
         return horaFormatter.string(from: date);
     }
     
-    class func getNombreMes(nroMes: Int) -> String {
+    func getNombreMes(nroMes: Int) -> String {
         var mes = "";
         switch nroMes {
         case 1:
@@ -127,7 +129,7 @@ class Common {
         return mes;
     }
     
-    class func countDaysTo(fecha: String) -> Int {
+    func countDaysTo(fecha: String) -> Int {
         let hasta = getFechaHoraDate(fecha: fecha)
         let today = Date()
         
@@ -139,5 +141,13 @@ class Common {
         let components = calendar.dateComponents([.day], from: date1, to: date2)
         
         return components.day! < 0 ? 0 : components.day!
+    }
+    
+    func initUsuariosConListaIds(ids: [String]) -> [UsuarioModel] {
+        var usuarios = [UsuarioModel]()
+        for id in ids {
+            usuarios.append(UsuarioModel(id: id))
+        }
+        return usuarios
     }
 }

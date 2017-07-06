@@ -1,18 +1,17 @@
 //
-//  FiestaTableViewCell.swift
-//  
+//  MatchTableViewCell.swift
+//  Fiestapp
 //
-//  Created by Nicolás Hechim on 13/5/17.
-//
+//  Created by Nicolás Hechim on 2/7/17.
+//  Copyright © 2017 Mint. All rights reserved.
 //
 
 import UIKit
 
-class FiestaTableViewCell: UITableViewCell {
+class MatchTableViewCell: UITableViewCell {
 
-    //MARK: Properties
     @IBOutlet weak var details: UILabel!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet var cardMask: UIView!
     @IBOutlet var contentViewCell: UIView!
     @IBOutlet weak var iconCircle: UIImageView!
@@ -20,7 +19,6 @@ class FiestaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

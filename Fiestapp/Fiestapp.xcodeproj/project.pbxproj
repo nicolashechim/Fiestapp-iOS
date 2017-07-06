@@ -25,7 +25,6 @@
 		932AF14B1EE8975400BB0D1F /* FIRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1481EE8975400BB0D1F /* FIRObject.swift */; };
 		932AF14C1EE8975400BB0D1F /* UbicacionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1491EE8975400BB0D1F /* UbicacionModel.swift */; };
 		932AF1501EE897D100BB0D1F /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF14E1EE897D100BB0D1F /* FirebaseService.swift */; };
-		932AF1511EE897D100BB0D1F /* MisFiestasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF14F1EE897D100BB0D1F /* MisFiestasService.swift */; };
 		932AF1691EE8A3CF00BB0D1F /* FiestaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1541EE8A3CF00BB0D1F /* FiestaTableViewController.swift */; };
 		932AF16A1EE8A3CF00BB0D1F /* InformacionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1561EE8A3CF00BB0D1F /* InformacionTableViewCell.swift */; };
 		932AF16B1EE8A3CF00BB0D1F /* MeGustasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1571EE8A3CF00BB0D1F /* MeGustasTableViewCell.swift */; };
@@ -70,7 +69,17 @@
 		93567AEE1EC25BA700056124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEC1EC25BA700056124 /* Main.storyboard */; };
 		93567AF01EC25BA700056124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93567AEF1EC25BA700056124 /* Assets.xcassets */; };
 		93567AF31EC25BA700056124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93567AF11EC25BA700056124 /* LaunchScreen.storyboard */; };
+		936E375C1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E375B1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift */; };
 		937392A21EEC48E300DADD23 /* UsuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937392A11EEC48E300DADD23 /* UsuarioModel.swift */; };
+		93A374D71F082DE60001FA12 /* MeGustasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374D61F082DE60001FA12 /* MeGustasService.swift */; };
+		93A374DD1F0847140001FA12 /* EnumReaccionesMeGustas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374DC1F0847140001FA12 /* EnumReaccionesMeGustas.swift */; };
+		93A374E71F085C7E0001FA12 /* ic_matches.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A374E41F085C7E0001FA12 /* ic_matches.png */; };
+		93A374E81F085C7E0001FA12 /* ic_matches@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A374E51F085C7E0001FA12 /* ic_matches@2x.png */; };
+		93A374E91F085C7E0001FA12 /* ic_matches@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A374E61F085C7E0001FA12 /* ic_matches@3x.png */; };
+		93A374F21F0863120001FA12 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374F01F0863120001FA12 /* MatchesTableViewController.swift */; };
+		93A374F41F0863280001FA12 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374F31F0863280001FA12 /* MatchTableViewCell.swift */; };
+		93A374F61F0866730001FA12 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374F51F0866730001FA12 /* MatchesViewController.swift */; };
+		93A374FB1F0868D20001FA12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374FA1F0868D20001FA12 /* HomeViewController.swift */; };
 		93ADDC081EF5957B00D48DA0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */; };
 		93ADDC0A1EF597BF00D48DA0 /* ProgressOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */; };
 		93ADDC0D1EF68F6000D48DA0 /* ic_meGustasCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */; };
@@ -112,7 +121,6 @@
 		932AF1481EE8975400BB0D1F /* FIRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRObject.swift; sourceTree = "<group>"; };
 		932AF1491EE8975400BB0D1F /* UbicacionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbicacionModel.swift; sourceTree = "<group>"; };
 		932AF14E1EE897D100BB0D1F /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		932AF14F1EE897D100BB0D1F /* MisFiestasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MisFiestasService.swift; sourceTree = "<group>"; };
 		932AF1541EE8A3CF00BB0D1F /* FiestaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaTableViewController.swift; sourceTree = "<group>"; };
 		932AF1561EE8A3CF00BB0D1F /* InformacionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformacionTableViewCell.swift; sourceTree = "<group>"; };
 		932AF1571EE8A3CF00BB0D1F /* MeGustasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasTableViewCell.swift; sourceTree = "<group>"; };
@@ -158,7 +166,17 @@
 		93567AED1EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93567AEF1EC25BA700056124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93567AF21EC25BA700056124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		936E375B1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasSinResultadosViewController.swift; sourceTree = "<group>"; };
 		937392A11EEC48E300DADD23 /* UsuarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioModel.swift; sourceTree = "<group>"; };
+		93A374D61F082DE60001FA12 /* MeGustasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasService.swift; sourceTree = "<group>"; };
+		93A374DC1F0847140001FA12 /* EnumReaccionesMeGustas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumReaccionesMeGustas.swift; sourceTree = "<group>"; };
+		93A374E41F085C7E0001FA12 /* ic_matches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_matches.png; sourceTree = "<group>"; };
+		93A374E51F085C7E0001FA12 /* ic_matches@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_matches@2x.png"; sourceTree = "<group>"; };
+		93A374E61F085C7E0001FA12 /* ic_matches@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_matches@3x.png"; sourceTree = "<group>"; };
+		93A374F01F0863120001FA12 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		93A374F31F0863280001FA12 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		93A374F51F0866730001FA12 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		93A374FA1F0868D20001FA12 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressOverlayView.swift; sourceTree = "<group>"; };
 		93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_meGustasCell.png; sourceTree = "<group>"; };
@@ -225,6 +243,7 @@
 				931C5ABD1EED55DB00BD0C0C /* ArrayExtension.swift */,
 				93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */,
 				93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */,
+				93A374DC1F0847140001FA12 /* EnumReaccionesMeGustas.swift */,
 			);
 			name = Common;
 			path = Fiestapp/Common;
@@ -246,9 +265,9 @@
 			isa = PBXGroup;
 			children = (
 				932AF14E1EE897D100BB0D1F /* FirebaseService.swift */,
-				932AF14F1EE897D100BB0D1F /* MisFiestasService.swift */,
 				93CB91991EEC1E9600DA4340 /* FiestaService.swift */,
 				931C5ABB1EEC4B6100BD0C0C /* FacebookService.swift */,
+				93A374D61F082DE60001FA12 /* MeGustasService.swift */,
 			);
 			name = Services;
 			path = Fiestapp/Services;
@@ -258,7 +277,9 @@
 			isa = PBXGroup;
 			children = (
 				932AF1531EE8A3CF00BB0D1F /* FiestaPerfil */,
+				93A374F91F0868D20001FA12 /* Home */,
 				932AF1581EE8A3CF00BB0D1F /* Login */,
+				93A374EF1F0863120001FA12 /* Matches */,
 				932AF15A1EE8A3CF00BB0D1F /* MeGustas */,
 				932AF1611EE8A3CF00BB0D1F /* MisFiestas */,
 				932AF1651EE8A3CF00BB0D1F /* Notificaciones */,
@@ -289,6 +310,7 @@
 		932AF1581EE8A3CF00BB0D1F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				93A374EC1F0862A70001FA12 /* Matches */,
 				932AF1591EE8A3CF00BB0D1F /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -301,6 +323,7 @@
 				932AF15C1EE8A3CF00BB0D1F /* BackgroundKolodaAnimator.swift */,
 				93CB918B1EEB0BC400DA4340 /* CustomKolodaView.swift */,
 				93CB918C1EEB0BC400DA4340 /* CustomOverlayView.swift */,
+				936E375B1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift */,
 			);
 			path = MeGustas;
 			sourceTree = "<group>";
@@ -461,9 +484,46 @@
 			path = fiestapp;
 			sourceTree = "<group>";
 		};
+		93A374EC1F0862A70001FA12 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Matches;
+			path = Fiestapp/ViewControllers/Matches;
+			sourceTree = SOURCE_ROOT;
+		};
+		93A374EF1F0863120001FA12 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				93A374F01F0863120001FA12 /* MatchesTableViewController.swift */,
+				93A374F51F0866730001FA12 /* MatchesViewController.swift */,
+				93A374F11F0863120001FA12 /* TableViewCells */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		93A374F11F0863120001FA12 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				93A374F31F0863280001FA12 /* MatchTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		93A374F91F0868D20001FA12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				93A374FA1F0868D20001FA12 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		93CB91761EEAE60800DA4340 /* MeGustas */ = {
 			isa = PBXGroup;
 			children = (
+				93A374E41F085C7E0001FA12 /* ic_matches.png */,
+				93A374E51F085C7E0001FA12 /* ic_matches@2x.png */,
+				93A374E61F085C7E0001FA12 /* ic_matches@3x.png */,
 				93CB91911EEB0C8800DA4340 /* ic_undo.png */,
 				93CB91921EEB0C8800DA4340 /* ic_undo@2x.png */,
 				93CB91931EEB0C8800DA4340 /* ic_undo@3x.png */,
@@ -568,6 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				932AF1B31EE8A81500BB0D1F /* ic_action_notifications@2x.png in Resources */,
+				93A374E91F085C7E0001FA12 /* ic_matches@3x.png in Resources */,
 				932AF1A81EE8A81500BB0D1F /* Ubuntu-B.ttf in Resources */,
 				932AF1B41EE8A81500BB0D1F /* ic_action_notifications@3x.png in Resources */,
 				932AF1BF1EE8A81500BB0D1F /* Branding@2x.png in Resources */,
@@ -585,6 +646,7 @@
 				932AF1B01EE8A81500BB0D1F /* Ubuntu-RI.ttf in Resources */,
 				932AF1AA1EE8A81500BB0D1F /* Ubuntu-C.ttf in Resources */,
 				93CB91801EEAE69600DA4340 /* ic_like.png in Resources */,
+				93A374E81F085C7E0001FA12 /* ic_matches@2x.png in Resources */,
 				931C5AD51EEDE16D00BD0C0C /* SwipeCardLike@3x.png in Resources */,
 				932AF1831EE8A6D500BB0D1F /* GoogleService-Info.plist in Resources */,
 				93CB91961EEB0C8800DA4340 /* ic_undo@3x.png in Resources */,
@@ -602,6 +664,7 @@
 				932AF1AC1EE8A81500BB0D1F /* Ubuntu-LI.ttf in Resources */,
 				932AF1B71EE8A81500BB0D1F /* IconLogout@2x.png in Resources */,
 				932AF1B91EE8A81500BB0D1F /* iconTab1@2x.png in Resources */,
+				93A374E71F085C7E0001FA12 /* ic_matches.png in Resources */,
 				931C5AD31EEDE16D00BD0C0C /* SwipeCardLike.png in Resources */,
 				932AF1AB1EE8A81500BB0D1F /* Ubuntu-L.ttf in Resources */,
 				931C5AD91EEDE51000BD0C0C /* SwipeCardNope.png in Resources */,
@@ -677,6 +740,7 @@
 			files = (
 				932AF16C1EE8A3CF00BB0D1F /* LoginViewController.swift in Sources */,
 				932AF1421EE8909300BB0D1F /* Common.swift in Sources */,
+				93A374F21F0863120001FA12 /* MatchesTableViewController.swift in Sources */,
 				932AF1431EE8909300BB0D1F /* EnumFiestasCell.swift in Sources */,
 				932AF1501EE897D100BB0D1F /* FirebaseService.swift in Sources */,
 				932AF14A1EE8975400BB0D1F /* FiestaModel.swift in Sources */,
@@ -685,12 +749,16 @@
 				932AF16B1EE8A3CF00BB0D1F /* MeGustasTableViewCell.swift in Sources */,
 				932AF1751EE8A3CF00BB0D1F /* MisFiestasViewController.swift in Sources */,
 				932AF1771EE8A3CF00BB0D1F /* NuevaFiestaViewController.swift in Sources */,
+				93A374D71F082DE60001FA12 /* MeGustasService.swift in Sources */,
 				937392A21EEC48E300DADD23 /* UsuarioModel.swift in Sources */,
 				932AF1691EE8A3CF00BB0D1F /* FiestaTableViewController.swift in Sources */,
+				93A374F61F0866730001FA12 /* MatchesViewController.swift in Sources */,
 				93CB919A1EEC1E9600DA4340 /* FiestaService.swift in Sources */,
 				93CB918F1EEB0BC400DA4340 /* CustomOverlayView.swift in Sources */,
+				93A374F41F0863280001FA12 /* MatchTableViewCell.swift in Sources */,
 				93CB918E1EEB0BC400DA4340 /* CustomKolodaView.swift in Sources */,
 				932AF1821EE8A6D500BB0D1F /* AppDelegate.swift in Sources */,
+				93A374FB1F0868D20001FA12 /* HomeViewController.swift in Sources */,
 				932AF1741EE8A3CF00BB0D1F /* MisFiestasTableViewController.swift in Sources */,
 				93ADDC081EF5957B00D48DA0 /* UIColorExtension.swift in Sources */,
 				932AF16D1EE8A3CF00BB0D1F /* BackgroundAnimationViewController.swift in Sources */,
@@ -701,11 +769,12 @@
 				932AF1761EE8A3CF00BB0D1F /* NotificacionesViewController.swift in Sources */,
 				931C5ABE1EED55DB00BD0C0C /* ArrayExtension.swift in Sources */,
 				931C5AC01EED98E300BD0C0C /* UIImageViewExtension.swift in Sources */,
+				936E375C1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift in Sources */,
 				932AF14C1EE8975400BB0D1F /* UbicacionModel.swift in Sources */,
 				932AF16E1EE8A3CF00BB0D1F /* BackgroundKolodaAnimator.swift in Sources */,
 				932AF1C61EE8A95600BB0D1F /* FiestaTableViewCell.swift in Sources */,
-				932AF1511EE897D100BB0D1F /* MisFiestasService.swift in Sources */,
 				931C5ABC1EEC4B6100BD0C0C /* FacebookService.swift in Sources */,
+				93A374DD1F0847140001FA12 /* EnumReaccionesMeGustas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

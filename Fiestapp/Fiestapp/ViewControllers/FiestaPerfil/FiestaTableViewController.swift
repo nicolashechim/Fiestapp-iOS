@@ -20,12 +20,11 @@ class FiestaTableViewController: UITableViewController {
     @IBOutlet var labelTitle: UILabel!
     @IBOutlet var labelDetails: UILabel!
     @IBOutlet var labelDias: UILabel!
-    @IBOutlet var labelFotos: UILabel!
+    @IBOutlet var labelTipoFiesta: UILabel!
     @IBOutlet var labelInvitados: UILabel!
     @IBOutlet var labelCantidadDias: UILabel!
-    @IBOutlet var labelCantidadFotos: UILabel!
+    @IBOutlet var labelTipo: UILabel!
     @IBOutlet var labelCantidadInvitados: UILabel!
-    @IBOutlet var back: UIButton!
     @IBAction func goBack(_ sender: UIButton) {
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
@@ -34,7 +33,6 @@ class FiestaTableViewController: UITableViewController {
     
     var receivedData = FiestaModel()
     var invitadosMeGustas = [UsuarioModel]()
-    var fiestaService = FiestaService()
     let cellHeight: CGFloat = 170
     let cellIdentifier = "InformacionCell"
     
@@ -45,7 +43,7 @@ class FiestaTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Common.applyGradientView(view: viewHeader)
+        Common.shared.applyGradientView(view: viewHeader)
         initTableViewHeader()
         invitadosMeGustas = receivedData.Usuarios
         
@@ -102,7 +100,11 @@ class FiestaTableViewController: UITableViewController {
         if(indexPath.row == EnumFiestasCell.Informacion.hashValue) {
         }
         else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1
-            && receivedData.Usuarios.count > 1 ) {
+            && receivedData.Usuarios.count == 0 ) {
+            self.performSegue(withIdentifier: "segueMeGustasSinInvitados", sender: self)
+        }
+        else if(indexPath.row == EnumFiestasCell.MeGustas.hashValue - 1
+            && receivedData.Usuarios.count > 0 ) {
             self.performSegue(withIdentifier: "segueMeGustas", sender: self)
         }
         tableView.deselectRow(at: indexPath, animated: true)
@@ -111,9 +113,9 @@ class FiestaTableViewController: UITableViewController {
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueMeGustas" {
-            prepararInvitadosMeGustas(idFiesta: receivedData.key)
             let backgroundAnimationViewController = segue.destination as! BackgroundAnimationViewController
             backgroundAnimationViewController.setInvitados(usuarios: self.invitadosMeGustas)
+            backgroundAnimationViewController.setIdFiesta(idFiesta: self.receivedData.key)
         }
     }
     
@@ -122,7 +124,7 @@ class FiestaTableViewController: UITableViewController {
         labelDetails.text = receivedData.Detalle
         
         if let fiestaImageUrl = URL(string: receivedData.Imagen) {
-            Common.downloadImage(url: fiestaImageUrl, imageView: imageProfile)
+            Common.shared.downloadImage(url: fiestaImageUrl, imageView: imageProfile)
         }
         
         imageProfile.layer.cornerRadius = imageProfile.frame.height/2
@@ -134,23 +136,23 @@ class FiestaTableViewController: UITableViewController {
         imageProfileContainer.clipsToBounds = true
         
         labelCantidadDias.text = String(receivedData.CantidadDias)
-        //labelCantidadFotos.text = String(receivedData.CantidadFotos)
+        labelTipo.text = receivedData.Tipo
         labelCantidadInvitados.text = String(receivedData.CantidadInvitados)
     }
     
     func initInformacionCell(cell: InformacionTableViewCell) {
-        cell.labelDia.text = Common.getDiaMes(fecha: receivedData.FechaHora)
-        cell.labelHora.text = Common.getHora(fecha: receivedData.FechaHora)
+        cell.labelDia.text = Common.shared.getDiaMes(fecha: receivedData.FechaHora)
+        cell.labelHora.text = Common.shared.getHora(fecha: receivedData.FechaHora)
         cell.labelNombreLugar.text = receivedData.Ubicacion.Nombre
         
-        Common.initMapView(mapa: cell.mapaUbicacion,
+        Common.shared.initMapView(mapa: cell.mapaUbicacion,
                            latitud: Double(receivedData.Ubicacion.Latitud)!,
                            longitud: Double(receivedData.Ubicacion.Longitud)!,
                            zoom: 400)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapMap(_:)))
         cell.mapaUbicacion.addGestureRecognizer(tapGesture)
         
-        Common.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
+        Common.shared.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
     }
     
     func tapMap(_ sender: UITapGestureRecognizer) {
@@ -163,7 +165,7 @@ class FiestaTableViewController: UITableViewController {
         alertController.addAction(UIAlertAction(title: "Sí", style: UIAlertActionStyle.default)
         {
             (result : UIAlertAction) -> Void in
-            Common.goToMap(latitud: Double(self.receivedData.Ubicacion.Latitud)!, longitud: Double(self.receivedData.Ubicacion.Longitud)!, nombreDestino: self.receivedData.Ubicacion.Nombre)
+            Common.shared.goToMap(latitud: Double(self.receivedData.Ubicacion.Latitud)!, longitud: Double(self.receivedData.Ubicacion.Longitud)!, nombreDestino: self.receivedData.Ubicacion.Nombre)
         })
         
         self.present(alertController, animated: true, completion: nil)
@@ -204,41 +206,6 @@ class FiestaTableViewController: UITableViewController {
                 }
             }
         }
-        Common.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
-    }
-    
-    func prepararInvitadosMeGustas(idFiesta: String) {
-        FiestaService.FiltrarInvitadosMeGustas(idFiesta: idFiesta) { success in
-            for idUsuarioAFiltrar in success {
-                if let index = self.invitadosMeGustas.index(where: { $0.Id == idUsuarioAFiltrar }) {
-                    self.invitadosMeGustas.remove(at: index)
-                }
-            }
-            self.completarDatosInvitadosFacebook()
-        }
-    }
-    
-    func completarDatosInvitadosFacebook() {
-        for usuario in invitadosMeGustas {
-            let urlFotoPerfil =
-                FacebookService.shared.getUrlFotoPerfilInSize(idUsuario: usuario.Id,
-                                                              height: 1080,
-                                                              width: 1080)
-            usuario.FotoPerfil.downloadedFrom(url: urlFotoPerfil)
-            
-            FBSDKGraphRequest(graphPath: usuario.Id, parameters: ["fields": "name, gender"])
-                .start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil) {
-                    let fbDetails = result as! NSDictionary
-                    
-                    usuario.Nombre = fbDetails.value(forKey: "name") as! String
-                    if String(describing: fbDetails.value(forKey: "gender")) != "nil" {
-                        usuario.Genero = EnumGenero(rawValue: fbDetails.value(forKey: "gender") as! String)
-                    }
-                    
-                    print(fbDetails)
-                }
-            })
-        }
+        Common.shared.initCardMaskCell(viewContent: cell.viewContentCell, viewMask: cell.viewCardMask)
     }
 }

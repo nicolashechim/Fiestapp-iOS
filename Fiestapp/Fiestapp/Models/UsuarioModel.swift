@@ -14,4 +14,11 @@ class UsuarioModel {
     var FotoPerfil = UIImageView()
     var Nombre: String = ""
     var Genero = EnumGenero(rawValue: "None")
+
+    init() {
+    }
+    
+    init(id: String) {
+        self.Id = id
+    }
 }
