@@ -29,10 +29,21 @@ class HomeViewController: UITabBarController, UITabBarControllerDelegate {
                 }
             })
             
+            
             self.present(alertController, animated: true, completion: nil)
+            
+        }
+        
+        else if item.title == "Mis fiestas" {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.currentSelectedIndex = 0
+        }
+            
+        else if item.title == "Nueva fiesta" {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.currentSelectedIndex = 1
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBarController?.delegate = self
