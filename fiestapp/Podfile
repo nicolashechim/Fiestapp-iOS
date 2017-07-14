@@ -8,12 +8,12 @@ target 'fiestapp' do
   # Pods for fiestapp
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 
   # Pods for Facebook
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
-  pod 'Firebase/Database'
 
   # Pods for SwipeCards
   pod 'Koloda'
