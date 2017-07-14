@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930430461F182BB100741DFC /* CerrarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930430451F182BB100741DFC /* CerrarSesionViewController.swift */; };
 		931C5ABC1EEC4B6100BD0C0C /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C5ABB1EEC4B6100BD0C0C /* FacebookService.swift */; };
-		931C5ABE1EED55DB00BD0C0C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C5ABD1EED55DB00BD0C0C /* ArrayExtension.swift */; };
-		931C5AC01EED98E300BD0C0C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C5ABF1EED98E300BD0C0C /* UIImageViewExtension.swift */; };
-		931C5AC21EEDA40700BD0C0C /* EnumGenero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931C5AC11EEDA40700BD0C0C /* EnumGenero.swift */; };
 		931C5AD31EEDE16D00BD0C0C /* SwipeCardLike.png in Resources */ = {isa = PBXBuildFile; fileRef = 931C5AD01EEDE16D00BD0C0C /* SwipeCardLike.png */; };
 		931C5AD41EEDE16D00BD0C0C /* SwipeCardLike@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 931C5AD11EEDE16D00BD0C0C /* SwipeCardLike@2x.png */; };
 		931C5AD51EEDE16D00BD0C0C /* SwipeCardLike@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 931C5AD21EEDE16D00BD0C0C /* SwipeCardLike@3x.png */; };
@@ -18,9 +16,6 @@
 		931C5ADA1EEDE51000BD0C0C /* SwipeCardNope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 931C5AD71EEDE51000BD0C0C /* SwipeCardNope@2x.png */; };
 		931C5ADB1EEDE51000BD0C0C /* SwipeCardNope@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 931C5AD81EEDE51000BD0C0C /* SwipeCardNope@3x.png */; };
 		932AF1421EE8909300BB0D1F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF13E1EE8909300BB0D1F /* Common.swift */; };
-		932AF1431EE8909300BB0D1F /* EnumFiestasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF13F1EE8909300BB0D1F /* EnumFiestasCell.swift */; };
-		932AF1441EE8909300BB0D1F /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1401EE8909300BB0D1F /* EnumFuncionalidades.swift */; };
-		932AF1451EE8909300BB0D1F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1411EE8909300BB0D1F /* UIViewExtension.swift */; };
 		932AF14A1EE8975400BB0D1F /* FiestaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1471EE8975400BB0D1F /* FiestaModel.swift */; };
 		932AF14B1EE8975400BB0D1F /* FIRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1481EE8975400BB0D1F /* FIRObject.swift */; };
 		932AF14C1EE8975400BB0D1F /* UbicacionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932AF1491EE8975400BB0D1F /* UbicacionModel.swift */; };
@@ -72,7 +67,6 @@
 		936E375C1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936E375B1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift */; };
 		937392A21EEC48E300DADD23 /* UsuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937392A11EEC48E300DADD23 /* UsuarioModel.swift */; };
 		93A374D71F082DE60001FA12 /* MeGustasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374D61F082DE60001FA12 /* MeGustasService.swift */; };
-		93A374DD1F0847140001FA12 /* EnumReaccionesMeGustas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374DC1F0847140001FA12 /* EnumReaccionesMeGustas.swift */; };
 		93A374E71F085C7E0001FA12 /* ic_matches.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A374E41F085C7E0001FA12 /* ic_matches.png */; };
 		93A374E81F085C7E0001FA12 /* ic_matches@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A374E51F085C7E0001FA12 /* ic_matches@2x.png */; };
 		93A374E91F085C7E0001FA12 /* ic_matches@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A374E61F085C7E0001FA12 /* ic_matches@3x.png */; };
@@ -80,7 +74,14 @@
 		93A374F41F0863280001FA12 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374F31F0863280001FA12 /* MatchTableViewCell.swift */; };
 		93A374F61F0866730001FA12 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374F51F0866730001FA12 /* MatchesViewController.swift */; };
 		93A374FB1F0868D20001FA12 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A374FA1F0868D20001FA12 /* HomeViewController.swift */; };
-		93ADDC081EF5957B00D48DA0 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */; };
+		93A60DDD1F0FA2E300C49A07 /* EnumFiestasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DD41F0FA2E300C49A07 /* EnumFiestasCell.swift */; };
+		93A60DDE1F0FA2E300C49A07 /* EnumFuncionalidades.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DD51F0FA2E300C49A07 /* EnumFuncionalidades.swift */; };
+		93A60DDF1F0FA2E300C49A07 /* EnumGenero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DD61F0FA2E300C49A07 /* EnumGenero.swift */; };
+		93A60DE01F0FA2E300C49A07 /* EnumReaccionesMeGustas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DD71F0FA2E300C49A07 /* EnumReaccionesMeGustas.swift */; };
+		93A60DE11F0FA2E300C49A07 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DD91F0FA2E300C49A07 /* ArrayExtension.swift */; };
+		93A60DE21F0FA2E300C49A07 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DDA1F0FA2E300C49A07 /* UIColorExtension.swift */; };
+		93A60DE31F0FA2E300C49A07 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DDB1F0FA2E300C49A07 /* UIImageViewExtension.swift */; };
+		93A60DE41F0FA2E300C49A07 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A60DDC1F0FA2E300C49A07 /* UIViewExtension.swift */; };
 		93ADDC0A1EF597BF00D48DA0 /* ProgressOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */; };
 		93ADDC0D1EF68F6000D48DA0 /* ic_meGustasCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */; };
 		93ADDC0E1EF68F6000D48DA0 /* ic_meGustasCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 93ADDC0C1EF68F6000D48DA0 /* ic_meGustasCell@2x.png */; };
@@ -103,10 +104,8 @@
 /* Begin PBXFileReference section */
 		4B9BCFC6672A8773A1FC2AF2 /* Pods-fiestapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiestapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fiestapp/Pods-fiestapp.debug.xcconfig"; sourceTree = "<group>"; };
 		66492BB5F9DEFE2E3CD84D5A /* Pods_fiestapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fiestapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930430451F182BB100741DFC /* CerrarSesionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CerrarSesionViewController.swift; sourceTree = "<group>"; };
 		931C5ABB1EEC4B6100BD0C0C /* FacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
-		931C5ABD1EED55DB00BD0C0C /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		931C5ABF1EED98E300BD0C0C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
-		931C5AC11EEDA40700BD0C0C /* EnumGenero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumGenero.swift; sourceTree = "<group>"; };
 		931C5AD01EEDE16D00BD0C0C /* SwipeCardLike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwipeCardLike.png; sourceTree = "<group>"; };
 		931C5AD11EEDE16D00BD0C0C /* SwipeCardLike@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwipeCardLike@2x.png"; sourceTree = "<group>"; };
 		931C5AD21EEDE16D00BD0C0C /* SwipeCardLike@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwipeCardLike@3x.png"; sourceTree = "<group>"; };
@@ -114,9 +113,6 @@
 		931C5AD71EEDE51000BD0C0C /* SwipeCardNope@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwipeCardNope@2x.png"; sourceTree = "<group>"; };
 		931C5AD81EEDE51000BD0C0C /* SwipeCardNope@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SwipeCardNope@3x.png"; sourceTree = "<group>"; };
 		932AF13E1EE8909300BB0D1F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		932AF13F1EE8909300BB0D1F /* EnumFiestasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFiestasCell.swift; sourceTree = "<group>"; };
-		932AF1401EE8909300BB0D1F /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
-		932AF1411EE8909300BB0D1F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		932AF1471EE8975400BB0D1F /* FiestaModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiestaModel.swift; sourceTree = "<group>"; };
 		932AF1481EE8975400BB0D1F /* FIRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRObject.swift; sourceTree = "<group>"; };
 		932AF1491EE8975400BB0D1F /* UbicacionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbicacionModel.swift; sourceTree = "<group>"; };
@@ -169,7 +165,6 @@
 		936E375B1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasSinResultadosViewController.swift; sourceTree = "<group>"; };
 		937392A11EEC48E300DADD23 /* UsuarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioModel.swift; sourceTree = "<group>"; };
 		93A374D61F082DE60001FA12 /* MeGustasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeGustasService.swift; sourceTree = "<group>"; };
-		93A374DC1F0847140001FA12 /* EnumReaccionesMeGustas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumReaccionesMeGustas.swift; sourceTree = "<group>"; };
 		93A374E41F085C7E0001FA12 /* ic_matches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_matches.png; sourceTree = "<group>"; };
 		93A374E51F085C7E0001FA12 /* ic_matches@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_matches@2x.png"; sourceTree = "<group>"; };
 		93A374E61F085C7E0001FA12 /* ic_matches@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_matches@3x.png"; sourceTree = "<group>"; };
@@ -177,7 +172,14 @@
 		93A374F31F0863280001FA12 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		93A374F51F0866730001FA12 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		93A374FA1F0868D20001FA12 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		93A60DD41F0FA2E300C49A07 /* EnumFiestasCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFiestasCell.swift; sourceTree = "<group>"; };
+		93A60DD51F0FA2E300C49A07 /* EnumFuncionalidades.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFuncionalidades.swift; sourceTree = "<group>"; };
+		93A60DD61F0FA2E300C49A07 /* EnumGenero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumGenero.swift; sourceTree = "<group>"; };
+		93A60DD71F0FA2E300C49A07 /* EnumReaccionesMeGustas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumReaccionesMeGustas.swift; sourceTree = "<group>"; };
+		93A60DD91F0FA2E300C49A07 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		93A60DDA1F0FA2E300C49A07 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		93A60DDB1F0FA2E300C49A07 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		93A60DDC1F0FA2E300C49A07 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressOverlayView.swift; sourceTree = "<group>"; };
 		93ADDC0B1EF68F6000D48DA0 /* ic_meGustasCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_meGustasCell.png; sourceTree = "<group>"; };
 		93ADDC0C1EF68F6000D48DA0 /* ic_meGustasCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_meGustasCell@2x.png"; sourceTree = "<group>"; };
@@ -234,16 +236,10 @@
 		932AF13D1EE8909300BB0D1F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				93A60DD31F0FA2E300C49A07 /* Enums */,
+				93A60DD81F0FA2E300C49A07 /* Extensions */,
 				932AF13E1EE8909300BB0D1F /* Common.swift */,
-				931C5AC11EEDA40700BD0C0C /* EnumGenero.swift */,
-				931C5ABF1EED98E300BD0C0C /* UIImageViewExtension.swift */,
-				932AF13F1EE8909300BB0D1F /* EnumFiestasCell.swift */,
-				932AF1401EE8909300BB0D1F /* EnumFuncionalidades.swift */,
-				932AF1411EE8909300BB0D1F /* UIViewExtension.swift */,
-				931C5ABD1EED55DB00BD0C0C /* ArrayExtension.swift */,
-				93ADDC071EF5957B00D48DA0 /* UIColorExtension.swift */,
 				93ADDC091EF597BF00D48DA0 /* ProgressOverlayView.swift */,
-				93A374DC1F0847140001FA12 /* EnumReaccionesMeGustas.swift */,
 			);
 			name = Common;
 			path = Fiestapp/Common;
@@ -468,12 +464,12 @@
 		93567AE71EC25BA700056124 /* fiestapp */ = {
 			isa = PBXGroup;
 			children = (
-				932AF17F1EE8A6D400BB0D1F /* AppDelegate.swift */,
-				932AF1851EE8A81500BB0D1F /* Assets */,
-				93567AEF1EC25BA700056124 /* Assets.xcassets */,
-				932AF13D1EE8909300BB0D1F /* Common */,
 				932AF1801EE8A6D500BB0D1F /* GoogleService-Info.plist */,
 				932AF1811EE8A6D500BB0D1F /* Info.plist */,
+				932AF17F1EE8A6D400BB0D1F /* AppDelegate.swift */,
+				93567AEF1EC25BA700056124 /* Assets.xcassets */,
+				932AF1851EE8A81500BB0D1F /* Assets */,
+				932AF13D1EE8909300BB0D1F /* Common */,
 				93567AF11EC25BA700056124 /* LaunchScreen.storyboard */,
 				93567AEC1EC25BA700056124 /* Main.storyboard */,
 				932AF1461EE8975400BB0D1F /* Models */,
@@ -514,8 +510,31 @@
 			isa = PBXGroup;
 			children = (
 				93A374FA1F0868D20001FA12 /* HomeViewController.swift */,
+				930430451F182BB100741DFC /* CerrarSesionViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		93A60DD31F0FA2E300C49A07 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				93A60DD41F0FA2E300C49A07 /* EnumFiestasCell.swift */,
+				93A60DD51F0FA2E300C49A07 /* EnumFuncionalidades.swift */,
+				93A60DD61F0FA2E300C49A07 /* EnumGenero.swift */,
+				93A60DD71F0FA2E300C49A07 /* EnumReaccionesMeGustas.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		93A60DD81F0FA2E300C49A07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93A60DD91F0FA2E300C49A07 /* ArrayExtension.swift */,
+				93A60DDA1F0FA2E300C49A07 /* UIColorExtension.swift */,
+				93A60DDB1F0FA2E300C49A07 /* UIImageViewExtension.swift */,
+				93A60DDC1F0FA2E300C49A07 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		93CB91761EEAE60800DA4340 /* MeGustas */ = {
@@ -738,43 +757,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A60DDF1F0FA2E300C49A07 /* EnumGenero.swift in Sources */,
+				93A60DE11F0FA2E300C49A07 /* ArrayExtension.swift in Sources */,
 				932AF16C1EE8A3CF00BB0D1F /* LoginViewController.swift in Sources */,
 				932AF1421EE8909300BB0D1F /* Common.swift in Sources */,
 				93A374F21F0863120001FA12 /* MatchesTableViewController.swift in Sources */,
-				932AF1431EE8909300BB0D1F /* EnumFiestasCell.swift in Sources */,
 				932AF1501EE897D100BB0D1F /* FirebaseService.swift in Sources */,
 				932AF14A1EE8975400BB0D1F /* FiestaModel.swift in Sources */,
 				932AF14B1EE8975400BB0D1F /* FIRObject.swift in Sources */,
 				932AF16A1EE8A3CF00BB0D1F /* InformacionTableViewCell.swift in Sources */,
 				932AF16B1EE8A3CF00BB0D1F /* MeGustasTableViewCell.swift in Sources */,
+				93A60DDE1F0FA2E300C49A07 /* EnumFuncionalidades.swift in Sources */,
 				932AF1751EE8A3CF00BB0D1F /* MisFiestasViewController.swift in Sources */,
 				932AF1771EE8A3CF00BB0D1F /* NuevaFiestaViewController.swift in Sources */,
 				93A374D71F082DE60001FA12 /* MeGustasService.swift in Sources */,
+				93A60DE31F0FA2E300C49A07 /* UIImageViewExtension.swift in Sources */,
 				937392A21EEC48E300DADD23 /* UsuarioModel.swift in Sources */,
 				932AF1691EE8A3CF00BB0D1F /* FiestaTableViewController.swift in Sources */,
 				93A374F61F0866730001FA12 /* MatchesViewController.swift in Sources */,
 				93CB919A1EEC1E9600DA4340 /* FiestaService.swift in Sources */,
+				93A60DE01F0FA2E300C49A07 /* EnumReaccionesMeGustas.swift in Sources */,
+				930430461F182BB100741DFC /* CerrarSesionViewController.swift in Sources */,
 				93CB918F1EEB0BC400DA4340 /* CustomOverlayView.swift in Sources */,
 				93A374F41F0863280001FA12 /* MatchTableViewCell.swift in Sources */,
 				93CB918E1EEB0BC400DA4340 /* CustomKolodaView.swift in Sources */,
+				93A60DE21F0FA2E300C49A07 /* UIColorExtension.swift in Sources */,
+				93A60DDD1F0FA2E300C49A07 /* EnumFiestasCell.swift in Sources */,
 				932AF1821EE8A6D500BB0D1F /* AppDelegate.swift in Sources */,
 				93A374FB1F0868D20001FA12 /* HomeViewController.swift in Sources */,
 				932AF1741EE8A3CF00BB0D1F /* MisFiestasTableViewController.swift in Sources */,
-				93ADDC081EF5957B00D48DA0 /* UIColorExtension.swift in Sources */,
 				932AF16D1EE8A3CF00BB0D1F /* BackgroundAnimationViewController.swift in Sources */,
-				932AF1451EE8909300BB0D1F /* UIViewExtension.swift in Sources */,
-				932AF1441EE8909300BB0D1F /* EnumFuncionalidades.swift in Sources */,
-				931C5AC21EEDA40700BD0C0C /* EnumGenero.swift in Sources */,
 				93ADDC0A1EF597BF00D48DA0 /* ProgressOverlayView.swift in Sources */,
 				932AF1761EE8A3CF00BB0D1F /* NotificacionesViewController.swift in Sources */,
-				931C5ABE1EED55DB00BD0C0C /* ArrayExtension.swift in Sources */,
-				931C5AC01EED98E300BD0C0C /* UIImageViewExtension.swift in Sources */,
 				936E375C1F0C1DF2005C0E8E /* MeGustasSinResultadosViewController.swift in Sources */,
 				932AF14C1EE8975400BB0D1F /* UbicacionModel.swift in Sources */,
 				932AF16E1EE8A3CF00BB0D1F /* BackgroundKolodaAnimator.swift in Sources */,
 				932AF1C61EE8A95600BB0D1F /* FiestaTableViewCell.swift in Sources */,
 				931C5ABC1EEC4B6100BD0C0C /* FacebookService.swift in Sources */,
-				93A374DD1F0847140001FA12 /* EnumReaccionesMeGustas.swift in Sources */,
+				93A60DE41F0FA2E300C49A07 /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
