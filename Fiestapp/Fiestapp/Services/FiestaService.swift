@@ -41,6 +41,9 @@ class FiestaService {
                         }
                     }
                 }
+                else {
+                    completionHandler(fiestas)
+                }
             }) { (error) in
                 print(error.localizedDescription)
         }
@@ -78,20 +81,32 @@ class FiestaService {
             .queryEqual(toValue: codigo)
             .observeSingleEvent(of: .value, with: { (snapshot) in
                 if snapshot.exists() {
-                    //Se encontró una fiesta con el código ingresado
-                    for child in snapshot.children.allObjects as? [FIRDataSnapshot] ?? [] {
-                        for childOfChild in child.children.allObjects {
-                            if (childOfChild as AnyObject).key == "key" {
-                                // Se agrega la fiesta al listado de fiestas del usuario logueado
-                                FirebaseService.shared.ref.child("usuarios")
-                                    .child("/" + FirebaseService.shared.userIdFacebook! + "/Fiestas/" + String(describing: (childOfChild as AnyObject)))
-                                    .setValue(true)
-                                completionHandler(true)
-                            }
-                        }
-                        // No se encontró fiesta con el código ingresado
+                    // Se encontró una fiesta con el código ingresado
+                    var fiestas = [FiestaModel]()
+                    // Se mapea a FiestaModel
+                    for child in snapshot.children.allObjects {
+                        fiestas.append(FiestaModel(snapshot: child as! FIRDataSnapshot))
+                    }
+                    // El usuario logueado ya es invitado de la fiesta?
+                    if ((fiestas.first?.Usuarios.index(where: { $0.Id == FirebaseService.shared.userIdFacebook })) != nil) {
                         completionHandler(false)
                     }
+                    else {
+                        // Se agrega la fiesta al listado de fiestas del usuario logueado
+                        FirebaseService.shared.ref.child("usuarios")
+                            .child("/" + FirebaseService.shared.userIdFacebook! + "/Fiestas/" + (fiestas.first?.key)!)
+                            .setValue(true)
+                        
+                        // Se agrega el usuario al listado de usuarios de la fiesta
+                        FirebaseService.shared.ref.child("fiestas")
+                            .child("/" + (fiestas.first?.key)! + "/Usuarios/" + FirebaseService.shared.userIdFacebook!)
+                            .setValue(true)
+                        
+                        completionHandler(true)
+                    }
+                }
+                else {
+                    completionHandler(false)
                 }
             }) { (error) in
                 print(error.localizedDescription)

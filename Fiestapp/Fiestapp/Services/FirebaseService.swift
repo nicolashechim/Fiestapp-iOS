@@ -14,6 +14,7 @@ class FirebaseService {
     
     let ref = FIRDatabase.database().reference()
     let userIDFirebase = FIRAuth.auth()?.currentUser?.uid
+    
     let userIdFacebook = FIRAuth.auth()?.currentUser?.providerData[0].uid
     
     func cerrarSesion() {

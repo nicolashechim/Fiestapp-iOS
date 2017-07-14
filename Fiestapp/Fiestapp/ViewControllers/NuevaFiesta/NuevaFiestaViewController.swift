@@ -33,7 +33,7 @@ class NuevaFiestaViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
             else {
-                let alertController = UIAlertController(title: "Error", message: "Ingresaste un código incorrecto. ¡Probá otra vez!", preferredStyle: UIAlertControllerStyle.actionSheet)
+                let alertController = UIAlertController(title: "Error", message: "Código inválido. ¡Probá con otro!", preferredStyle: UIAlertControllerStyle.actionSheet)
                 
                 alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default)
                 {

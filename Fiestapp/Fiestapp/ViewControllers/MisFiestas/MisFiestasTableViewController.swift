@@ -13,15 +13,47 @@ class MisFiestasTableViewController: UITableViewController {
     var fiestas = [FiestaModel]()
     let cellHeight: CGFloat = 84
     let cellIdentifier = "FiestaCell"
+    var buscarDidAppear = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ProgressOverlayView.shared.showProgressView(view)
         FiestaService.shared.obtenerFiestas() { fiestas in
-            self.fiestas = fiestas
-            self.tableView.reloadData()
+            self.buscarDidAppear = true
+            if fiestas.count == 0 {
+                self.mostrarNotificacionAgregarFiesta()
+            }
+            else {
+                self.fiestas = fiestas
+                self.tableView.reloadData()
+            }
+            
             ProgressOverlayView.shared.hideProgressView()
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if fiestas.count == 0 && buscarDidAppear {
+            self.mostrarNotificacionAgregarFiesta()
+        }
+    }
+    
+    func mostrarNotificacionAgregarFiesta() {
+        let alertController = UIAlertController(title: "Aún no tenés fiestas", message: "¡Empezá añadiendo la primera!", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel)
+        {
+            (result : UIAlertAction) -> Void in
+        })
+        
+        
+        alertController.addAction(UIAlertAction(title: "Nueva fiesta", style: UIAlertActionStyle.destructive)
+        {
+            (result : UIAlertAction) -> Void in
+            self.performSegue(withIdentifier: "segueAgregarFiesta", sender: self)
+        })
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,7 +94,7 @@ class MisFiestasTableViewController: UITableViewController {
     
     // This function is called before the segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = tableView.indexPathForSelectedRow{
+        if let indexPath = tableView.indexPathForSelectedRow {
             let selectedRow = indexPath.row
             let fiestaTableViewController = segue.destination as! FiestaTableViewController
             fiestaTableViewController.receivedData = fiestas[selectedRow]
