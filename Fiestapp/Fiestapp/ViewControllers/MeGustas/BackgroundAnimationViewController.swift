@@ -31,6 +31,7 @@ class BackgroundAnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         Common.shared.applyGradientView(view: self.viewHeader)
         ProgressOverlayView.shared.showProgressView(self.view)
         
@@ -41,7 +42,9 @@ class BackgroundAnimationViewController: UIViewController {
                 }
             }
             if self.invitados.count == 0 {
+                
                 ProgressOverlayView.shared.hideProgressView()
+                
                 // El usuario no evaluó invitados de la fiesta y no hay invitados por evaluar
                 if idsAFiltrar.count == 0 {
                     self.titulo = MeGustasService.QUIEN_TE_GUSTA
@@ -209,7 +212,7 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     }
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return invitados.count
+        return self.invitados.count
     }
     
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
@@ -218,6 +221,7 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
         invitados[index].FotoPerfil.clipsToBounds = true
         
         return invitados[index].FotoPerfil
+        //return UIImageView(image: UIImage(named: "ic_meGustasCell.png"))
     }
     
     func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {

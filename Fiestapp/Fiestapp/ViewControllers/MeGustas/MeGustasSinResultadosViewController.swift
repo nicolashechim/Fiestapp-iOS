@@ -14,12 +14,20 @@ class MeGustasSinResultadosViewController: UIViewController {
     @IBOutlet var viewHeader: UIView!
     @IBOutlet var labelTitulo: UILabel!
     @IBOutlet var labelMensaje: UILabel!
+    @IBOutlet var buttonMisMatches: UIButton!
     @IBAction func buttonMisMatches(_ sender: UIButton) {
         self.performSegue(withIdentifier: "segueMatches", sender: self)
     }
     @IBAction func goBack(_ sender: UIButton) {
         if let navController = self.navigationController {
-            navController.popViewController(animated: true)
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            if (appDelegate.vc != nil) {
+                navController.popToViewController(appDelegate.vc!, animated:true)
+            }
+            else {
+                navController.popToRootViewController(animated: true)
+            }
         }
     }
     
@@ -41,11 +49,21 @@ class MeGustasSinResultadosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         Common.shared.applyGradientView(view: viewHeader)
+        print(titulo)
+        print(MeGustasService.SIN_MATCHES)
+        if mensaje == MeGustasService.SIN_MATCHES {
+            self.buttonMisMatches.isHidden = true
+        }
         self.labelTitulo.text = titulo
         self.labelMensaje.text = mensaje
    
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if mensaje == MeGustasService.SIN_MATCHES {
+            self.buttonMisMatches.isHidden = true
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
